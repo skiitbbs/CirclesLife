@@ -3,15 +3,13 @@ package lib;
 import java.io.File;
 import java.io.FileInputStream;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-
-
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelConfig {
 	
-	HSSFWorkbook wb;
-	HSSFSheet sheet1;
+	XSSFWorkbook wb;
+	XSSFSheet sheet1;
 	
 	public ExcelConfig(String excelPath){
 		
@@ -23,7 +21,7 @@ public class ExcelConfig {
 			
 			FileInputStream fis = new FileInputStream(src);
 			
-			wb = new HSSFWorkbook(fis);
+			wb = new XSSFWorkbook(fis);
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
