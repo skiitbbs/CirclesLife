@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import lib.ExcelConfig;
+
 public class circleSwitchFlow {
 	
 public WebDriver pdriver;
@@ -19,11 +21,16 @@ public WebDriver pdriver;
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
+		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/Library/Mobile Documents/com~apple~CloudDocs/Circles-ExcelData.xlsx");
+		String email = excel.getData(0, 1, 1);
+		String pass = excel.getData(0, 2, 1);
+		String portNo = excel.getData(0, 10, 1);
+		
 		//This below line of code will, Login and land on Switch option.
 		pdriver.get("https://staging.circles.asia/switch/login");
 		
-		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys("sumit.testmail02@gmail.com");
-		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys("mummy ilu");
+		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys(email);
+		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div[3]/form/div[4]/div/div/button")).click();
 		
 		//Below line of code will select the Switch option and proceed further accordingly.
@@ -33,7 +40,7 @@ public WebDriver pdriver;
 		pdriver.findElement(By.xpath("//*[@id=\"st-container\"]/div/div/div[2]/span/div/div/footer/div/div/div/div")).click();
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/footer/div/div/div/a")).click();
 		
-		pdriver.findElement(By.xpath("//input[@type='text']")).sendKeys("91234098");
+		pdriver.findElement(By.xpath("//input[@type='text']")).sendKeys(portNo);
 		pdriver.findElement(By.xpath("//*[@id=\'number-select-container\']/div[2]/div/div/div/div/div/div[4]/div/div/div[1]/div/div[1]/div")).click();
 		
 		pdriver.findElement(By.xpath("//*[@id=\'number-select-container\']/div[2]/div/div/div/div/div/div[2]/button/span")).click();

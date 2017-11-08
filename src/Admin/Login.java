@@ -18,7 +18,7 @@ public class Login {
 		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
 		
 		String email = excel.getData(0, 1, 3);
-		String pass = excel.getData(1, 2, 3);
+		String pass = excel.getData(0, 2, 3);
 		
 		pdriver.findElement(By.xpath("//input[@autofocus='autofocus']")).sendKeys(email);
 		pdriver.findElement(By.xpath("//input[@type='password']")).sendKeys(pass);

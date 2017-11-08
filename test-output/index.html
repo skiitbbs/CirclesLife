@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testCases.AdminTC" hash-for-method="admin">admin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testCases.TestCase1" hash-for-method="CirclesSwitch">CirclesSwitch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,18 +120,18 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCases.AdminTC</span>
+              <span class="class-name">testCases.TestCase1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="admin">
-                  </a> <!-- admin -->
-                  <span class="method-name">admin</span>
+                  <a name="CirclesSwitch">
+                  </a> <!-- CirclesSwitch -->
+                  <span class="method-name">CirclesSwitch</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at lib.ExcelConfig.getData(ExcelConfig.java:37)
-	at Admin.Login.login(Login.java:20)
-	at testCases.AdminTC.admin(AdminTC.java:33)
+	at lib.ExcelConfig.getData(ExcelConfig.java:38)
+	at Pages.circleSwitchFlow.CircleSwitchFlow(circleSwitchFlow.java:27)
+	at testCases.TestCase1.CirclesSwitch(TestCase1.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -166,7 +166,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/69/27p2kcw966l10g_lzp5zgt_c0000gn/T/testng-eclipse--1949194730/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/69/27p2kcw966l10g_lzp5zgt_c0000gn/T/testng-eclipse--599714214/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -175,7 +175,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.AdminTC&quot;/&gt;
+      &lt;class name=&quot;testCases.TestCase1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -217,14 +217,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'admin')
-data.setCell(0, 2, 'testCases.AdminTC')
-data.setCell(0, 3, 709);
+data.setCell(0, 1, 'CirclesSwitch')
+data.setCell(0, 2, 'testCases.TestCase1')
+data.setCell(0, 3, 79469);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 709 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -250,7 +250,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.AdminTC</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.TestCase1</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">getBrowser</span>
                 <span class="method-start">0 ms</span>
@@ -258,9 +258,13 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">admin</span>
-                <span class="method-start">3438 ms</span>
+                <span class="method-name">CirclesSwitch</span>
+                <span class="method-start">15817 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">browserclose</span>
+                <span class="method-start">95290 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

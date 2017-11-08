@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import lib.ExcelConfig;
+
 
 public class logIn {
 	
@@ -20,12 +22,11 @@ public class logIn {
 	
 		///Users/sumitkumar/eclipse-workspace/CirclesLife/src/lib/Test-Sheet.numbers
 	
-		/*
+		
 		//Below line of excel code is going to import the data from excel.
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/lib/Test-Sheet.numbers");
-		String email = excel.getData(0, 0, 0);
-		String pass = excel.getData(0, 0, 1);
-		*/
+		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/Library/Mobile Documents/com~apple~CloudDocs/Circles-ExcelData.xlsx");
+		String email = excel.getData(0, 1, 1);
+		String pass = excel.getData(0, 2, 1);
 		
 		public void login() {
 		
@@ -33,8 +34,8 @@ public class logIn {
 		
 		
 		//pdriver.findElement(By.xpath("//*[@id=\'site-navigation\']/div[1]/div[2]/div/a[2]")).click();
-		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys("sumit.kumar.iitbbsr@gmail.com");
-		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys("mummy ilu");
+		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys(email);
+		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		

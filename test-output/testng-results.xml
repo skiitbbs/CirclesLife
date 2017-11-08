@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4154" started-at="2017-10-31T09:10:01Z" finished-at="2017-10-31T09:10:05Z">
+  <suite name="Default suite" duration-ms="95430" started-at="2017-11-07T10:32:48Z" finished-at="2017-11-07T10:34:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4154" started-at="2017-10-31T09:10:01Z" finished-at="2017-10-31T09:10:05Z">
-      <class name="testCases.AdminTC">
-        <test-method status="PASS" signature="getBrowser()[pri:0, instance:testCases.AdminTC@1d057a39]" name="getBrowser" is-config="true" duration-ms="3420" started-at="2017-10-31T17:10:01Z" finished-at="2017-10-31T17:10:04Z">
+    <test name="Default test" duration-ms="95430" started-at="2017-11-07T10:32:48Z" finished-at="2017-11-07T10:34:23Z">
+      <class name="testCases.TestCase1">
+        <test-method status="PASS" signature="getBrowser()[pri:0, instance:testCases.TestCase1@26be92ad]" name="getBrowser" is-config="true" duration-ms="15806" started-at="2017-11-07T18:32:48Z" finished-at="2017-11-07T18:33:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="FAIL" signature="admin()[pri:0, instance:testCases.AdminTC@1d057a39]" name="admin" duration-ms="709" started-at="2017-10-31T17:10:04Z" finished-at="2017-10-31T17:10:05Z">
+        <test-method status="FAIL" signature="CirclesSwitch()[pri:0, instance:testCases.TestCase1@26be92ad]" name="CirclesSwitch" duration-ms="79469" started-at="2017-11-07T18:33:03Z" finished-at="2017-11-07T18:34:23Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at lib.ExcelConfig.getData(ExcelConfig.java:37)
-	at Admin.Login.login(Login.java:20)
-	at testCases.AdminTC.admin(AdminTC.java:33)
+	at lib.ExcelConfig.getData(ExcelConfig.java:38)
+	at Pages.circleSwitchFlow.CircleSwitchFlow(circleSwitchFlow.java:27)
+	at testCases.TestCase1.CirclesSwitch(TestCase1.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -48,8 +48,12 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- admin -->
-      </class> <!-- testCases.AdminTC -->
+        </test-method> <!-- CirclesSwitch -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:testCases.TestCase1@26be92ad]" name="browserclose" is-config="true" duration-ms="136" started-at="2017-11-07T18:34:23Z" finished-at="2017-11-07T18:34:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- testCases.TestCase1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

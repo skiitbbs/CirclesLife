@@ -2,6 +2,7 @@ package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,7 @@ import Pages.logIn;
 import Pages.mobileDevice;
 import Pages.normalUser;
 import Pages.paymentPage;
+import Pages.portInFlow;
 
 
 public class TestCase1 {
@@ -25,8 +27,8 @@ WebDriver driver;
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	driver.get("borg.circles.asia:6180");
-	//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
+	//driver.get("borg.circles.asia:6180");
+	driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
 	//driver.get("https://www.circles.life/");
 	
 	return driver;
@@ -34,7 +36,7 @@ WebDriver driver;
 	
 	
 	//@Test
-	public void testcase1() {
+	public void normalflow() {
 		driver.get("https://staging.circles.asia/login");
 		
 		logIn login = new logIn(driver);
@@ -76,27 +78,42 @@ WebDriver driver;
 	
 	
 	
-	//@Test
+	@Test
 	public void CirclesSwitch() {
 		
 		//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/switch/login");
+		driver.get("https://staging.circles.asia/switch/plan");
 		//driver.get("https://www.circles.life/");
 		
 		
 		circleSwitchFlow csf = new circleSwitchFlow(driver);
 		csf.CircleSwitchFlow();
 		
+		paymentPage pg = new paymentPage(driver);
+		pg.PaymentPage();
+		
 	}
 	
 	
-	/*
-	@Test
-	public void normalUser() {
+	
+	//@Test
+	public void portinUser() {
 		
-		normalUser nu = new normalUser(driver);
-		nu.NormalUser();
+		driver.get("https://staging.circles.asia/login");
 		
+		logIn login = new logIn(driver);
+		login.login();
+		
+		portInFlow pf = new portInFlow(driver);
+		pf.portin();
+		
+		paymentPage pg = new paymentPage(driver);
+		pg.PaymentPage();
 	}
-	*/
-
+	
+	@AfterTest
+	public void browserclose() {
+		driver.close();
+	}
+	
 }
