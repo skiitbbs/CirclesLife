@@ -21,6 +21,7 @@ public class paymentPage {
 		
 		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
 		String visa = excel.getData(0, 11, 1);
+		String.valueOf(visa);
 		String cvv = excel.getData(0, 12, 1);
 		String name = excel.getData(0, 13, 1);
 

@@ -6,8 +6,8 @@
       <class name="testCases.TestCase1">
         <methods>
           <include name="browserclose"/>
+          <include name="portinUser"/>
           <include name="getBrowser"/>
-          <include name="CirclesSwitch"/>
         </methods>
       </class> <!-- testCases.TestCase1 -->
     </classes>

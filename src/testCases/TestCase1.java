@@ -78,7 +78,7 @@ WebDriver driver;
 	
 	
 	
-	@Test
+	//@Test
 	public void CirclesSwitch() {
 		
 		//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/switch/login");
@@ -96,7 +96,7 @@ WebDriver driver;
 	
 	
 	
-	//@Test
+	@Test
 	public void portinUser() {
 		
 		driver.get("https://staging.circles.asia/login");
@@ -109,6 +109,12 @@ WebDriver driver;
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+				e.printStackTrace();
+		}
 	}
 	
 	@AfterTest

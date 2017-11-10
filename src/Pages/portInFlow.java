@@ -37,6 +37,7 @@ WebDriver pdriver;
 		deliveryInfo dp = new deliveryInfo(pdriver);
 		dp.DeliveyInfo();
 		
+		pdriver.findElement(By.xpath("//*[@id=\"st-container\"]/div/div/div[2]/span/div/footer/div/div/div/div")).click();
 		
 	}
 

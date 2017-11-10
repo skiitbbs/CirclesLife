@@ -99,8 +99,8 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		if(pdriver.findElement(By.xpath("//*[@id=\'checkbox-no-pad\']/div/img")).isDisplayed()) {
-			pdriver.findElement(By.xpath("//*[@id=\'checkbox-no-pad\']/div/img")).click();
+		if(pdriver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).isDisplayed()) {
+			pdriver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).click();
 		}
 		
 		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
