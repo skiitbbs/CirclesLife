@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import lib.ExcelConfig;
+import lib.ExcelData;
 
 public class DocApproval {
 	
@@ -20,8 +21,9 @@ public class DocApproval {
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
-		String order = excel.getData(0, 3, 3);
+		ExcelData data = new ExcelData();
+		String order = data.getorderno();
+		
 		
 		pdriver.findElement(By.xpath("//*[@id=\'pjax-container\']/div/div/div[1]/ul/li[5]/a")).click();
 		//pdriver.findElement(By.xpath("//*[@id=\'orders_table\']/table/thead/tr/th[2]/a")).click();

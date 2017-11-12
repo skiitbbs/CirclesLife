@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import lib.ExcelConfig;
+import lib.ExcelData;
 
 public class Login {
 	
@@ -15,10 +16,16 @@ public class Login {
 	
 	public void login() {
 		
+		ExcelData data = new ExcelData();
+		String email = data.getadminemail();
+		String pass = data.getadminpass();
+		
+		/*
 		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
 		
 		String email = excel.getData(0, 1, 3);
 		String pass = excel.getData(0, 2, 3);
+		*/
 		
 		pdriver.findElement(By.xpath("//input[@autofocus='autofocus']")).sendKeys(email);
 		pdriver.findElement(By.xpath("//input[@type='password']")).sendKeys(pass);

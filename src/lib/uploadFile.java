@@ -40,7 +40,7 @@ public class uploadFile {
 			robot.keyPress(KeyEvent.VK_TAB);
 			robot.keyRelease(KeyEvent.VK_META);
 			robot.keyRelease(KeyEvent.VK_TAB);
-			robot.delay(5000);
+			robot.delay(2000);
 			 
 			//Open Goto window
 			 

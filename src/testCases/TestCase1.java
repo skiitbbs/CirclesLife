@@ -27,7 +27,6 @@ WebDriver driver;
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	//driver.get("borg.circles.asia:6180");
 	driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
 	//driver.get("https://www.circles.life/");
 	

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import lib.ExcelConfig;
+import lib.ExcelData;
 
 
 public class logIn {
@@ -24,9 +24,9 @@ public class logIn {
 	
 		
 		//Below line of excel code is going to import the data from excel.
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/Library/Mobile Documents/com~apple~CloudDocs/Circles-ExcelData.xlsx");
-		String email = excel.getData(0, 1, 1);
-		String pass = excel.getData(0, 2, 1);
+		ExcelData data = new ExcelData();
+		String email = data.getemail();
+		String pass = data.getpass();
 		
 		public void login() {
 		

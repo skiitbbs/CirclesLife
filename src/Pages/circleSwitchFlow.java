@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import lib.ExcelConfig;
+import lib.ExcelData;
 
 public class circleSwitchFlow {
 	
@@ -21,10 +21,10 @@ public WebDriver pdriver;
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/Library/Mobile Documents/com~apple~CloudDocs/Circles-ExcelData.xlsx");
-		String email = excel.getData(0, 1, 1);
-		String pass = excel.getData(0, 2, 1);
-		String portNo = excel.getData(0, 10, 1);
+		ExcelData data = new ExcelData();
+		String email = data.getemail();
+		String pass = data.getpass();
+		String portNo = data.getportin();
 		
 		//This below line of code will, Login and land on Switch option.
 		pdriver.get("https://staging.circles.asia/switch/login");

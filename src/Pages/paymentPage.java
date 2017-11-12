@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import lib.ExcelConfig;
+import lib.ExcelData;
 
 public class paymentPage {
 	
@@ -19,11 +19,10 @@ public class paymentPage {
 	
 	public void PaymentPage() {
 		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
-		String visa = excel.getData(0, 11, 1);
-		String.valueOf(visa);
-		String cvv = excel.getData(0, 12, 1);
-		String name = excel.getData(0, 13, 1);
+		ExcelData data = new ExcelData();
+		String visa = data.getvisa();
+		String cvv = data.getcvv();
+		String name = data.getname();
 
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		

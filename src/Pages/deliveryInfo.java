@@ -3,11 +3,13 @@ package Pages;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import lib.ExcelConfig;
+
+import lib.ExcelData;
 import lib.uploadFile;
 
 public class deliveryInfo {
@@ -23,17 +25,14 @@ public WebDriver pdriver;
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Below lines of the code will Read the data from the excel. It also format the integer value to String.
-		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
-		//String email = excel.getData(0, 1, 0);
-		//String pass = excel.getData(0, 1, 1);
-		String mobile = excel.getData(0, 3, 1);
-		String pincode = excel.getData(0, 4, 1);
-		String house = excel.getData(0, 5, 1);
-		String street = excel.getData(0, 6, 1);
-		String unit = excel.getData(0, 7, 1);
-		String building = excel.getData(0, 8, 1);
-		String nric = excel.getData(0, 9, 1);
+		ExcelData data = new ExcelData();
+		String mobile = data.getmobile();
+		String pincode = data.getpincode();
+		String house = data.gethouse();
+		String street = data.getstreet();
+		String unit = data.getunit();
+		String building = data.getbuilding();
+		String nric = data.getnric();
 		
 		//Below line of code is going to fill all the form details entered into excel.
 		
@@ -57,10 +56,13 @@ public WebDriver pdriver;
 		pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][2]")).click();
 		
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+		jse.executeScript("window.scrollBy(0,250)", "");
 		
 		pdriver.findElement(By.xpath("//span[text()='9:00 - 1:00 PM']")).click();
 		

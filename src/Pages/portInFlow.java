@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import lib.ExcelConfig;
+import lib.ExcelData;
 
 public class portInFlow {
 	
@@ -17,8 +17,8 @@ WebDriver pdriver;
 	
 	public void portin() {
 		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/eclipse-workspace/CirclesLife/src/Test Data.xlsx");
-		String portin = excel.getData(0, 10, 1);
+		ExcelData data = new ExcelData();
+		String portin = data.getportin();
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		pdriver.findElement(By.xpath("//div[@class='pocket-button']")).click();
