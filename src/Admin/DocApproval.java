@@ -6,7 +6,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import lib.ExcelConfig;
 import lib.ExcelData;
 
 public class DocApproval {
@@ -19,7 +18,7 @@ public class DocApproval {
 	
 	public void docapprove() {
 		
-		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		ExcelData data = new ExcelData();
 		String order = data.getorderno();
