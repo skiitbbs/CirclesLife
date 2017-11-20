@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.AdminTC">
+      <class name="testCases.TestCase1">
         <methods>
-          <include name="getBrowser"/>
-          <include name="admin"/>
           <include name="browserclose"/>
+          <include name="getBrowser"/>
+          <include name="normalflow"/>
         </methods>
-      </class> <!-- testCases.AdminTC -->
+      </class> <!-- testCases.TestCase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
