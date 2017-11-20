@@ -1,13 +1,12 @@
 package testCases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Admin.DocApproval;
-import Admin.Login;
 import Pages.circleSwitchFlow;
 import Pages.logIn;
 import Pages.mobileDevice;
@@ -34,7 +33,7 @@ WebDriver driver;
      }
 	
 	
-	//@Test
+	@Test
 	public void normalflow() {
 		driver.get("https://staging.circles.asia/login");
 		
@@ -46,6 +45,12 @@ WebDriver driver;
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
+		
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+				e.printStackTrace();
+		}
 		
 		//login.logout();
 	}
@@ -95,7 +100,7 @@ WebDriver driver;
 	
 	
 	
-	@Test
+	//@Test
 	public void portinUser() {
 		
 		driver.get("https://staging.circles.asia/login");
@@ -106,11 +111,13 @@ WebDriver driver;
 		portInFlow pf = new portInFlow(driver);
 		pf.portin();
 		
+		driver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
 		
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(6000);
 		} catch (InterruptedException e) {
 				e.printStackTrace();
 		}

@@ -17,7 +17,13 @@ public class normalUser {
 	
 	pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	
-	pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/footer/div/div/div/a")).click();
+	try {
+		Thread.sleep(1000);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	
+	pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/footer/div/div/div/div")).click();
 	pdriver.findElement(By.xpath("//a[@action='PUSH']")).click();
 	
 	deliveryInfo di = new deliveryInfo(pdriver);

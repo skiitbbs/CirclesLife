@@ -53,6 +53,9 @@ public WebDriver pdriver;
 		pdriver.findElement(By.xpath("//input[@name='deliveryUnit']")).sendKeys(unit);
 		pdriver.findElement(By.xpath("//input[@name='deliveryBuildingName']")).sendKeys(building);
 		
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+		
 		pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][2]")).click();
 		
 		try {
@@ -61,7 +64,6 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		
 		pdriver.findElement(By.xpath("//span[text()='9:00 - 1:00 PM']")).click();
@@ -101,11 +103,6 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		if(pdriver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).isDisplayed()) {
-			pdriver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).click();
-		}
-		
-		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
 	}
 
 }

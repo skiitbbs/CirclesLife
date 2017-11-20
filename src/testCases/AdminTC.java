@@ -2,11 +2,14 @@ package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Admin.DocApproval;
 import Admin.Login;
+import Admin.OrderDelivery;
+import Admin.PlanSwitch;
 
 public class AdminTC {
 	
@@ -35,6 +38,17 @@ public class AdminTC {
 		DocApproval da = new DocApproval(driver);
 		da.docapprove();
 		
+		OrderDelivery del = new OrderDelivery(driver);
+		del.orderdelivery();
+		
+		PlanSwitch ps = new PlanSwitch(driver);
+		ps.planswitch();
+		
+	}
+	
+	@AfterTest
+	public void browserclose() {
+		driver.close();
 	}
 
 }

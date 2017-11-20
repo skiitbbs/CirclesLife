@@ -21,8 +21,7 @@ public class DocApproval {
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		ExcelData data = new ExcelData();
-		String order = data.getorderno();
-		
+		//String order = data.getorderno();
 		
 		pdriver.findElement(By.xpath("//*[@id=\'pjax-container\']/div/div/div[1]/ul/li[5]/a")).click();
 		//pdriver.findElement(By.xpath("//*[@id=\'orders_table\']/table/thead/tr/th[2]/a")).click();
@@ -33,7 +32,7 @@ public class DocApproval {
 			e.printStackTrace();
 		}
 		
-		pdriver.findElement(By.xpath("//input[@placeholder='Order Ref']")).sendKeys(order);
+		pdriver.findElement(By.xpath("//input[@placeholder='Order Ref']")).sendKeys("000001510812386691");
 		
 		try {
 			Thread.sleep(4000);

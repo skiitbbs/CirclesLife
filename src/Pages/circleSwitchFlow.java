@@ -50,6 +50,8 @@ public WebDriver pdriver;
 		deliveryInfo delivery = new deliveryInfo(pdriver);
 		delivery.DeliveyInfo();
 		
+		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		
 		
 	}
 
