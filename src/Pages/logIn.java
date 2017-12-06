@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,6 +33,8 @@ public class logIn {
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
+		//WebElement login = pdriver.findElement(By.xpath("//a[@href='https://shop.circles.life/login']"));
+		//login.click();
 		
 		//pdriver.findElement(By.xpath("//*[@id=\'site-navigation\']/div[1]/div[2]/div/a[2]")).click();
 		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys(email);

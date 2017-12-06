@@ -26,8 +26,8 @@ WebDriver driver;
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
-	//driver.get("https://www.circles.life/");
+	//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
+	driver.get("https://shop.circles.life/login");
 	
 	return driver;
      }
@@ -35,7 +35,7 @@ WebDriver driver;
 	
 	@Test
 	public void normalflow() {
-		driver.get("https://staging.circles.asia/login");
+		//driver.get("https://staging.circles.asia/login");
 		
 		logIn login = new logIn(driver);
 		login.login();
@@ -43,6 +43,7 @@ WebDriver driver;
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();
 		
+		/*
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
 		
@@ -51,7 +52,7 @@ WebDriver driver;
 		} catch (InterruptedException e) {
 				e.printStackTrace();
 		}
-		
+		*/
 		//login.logout();
 	}
 	
@@ -86,7 +87,7 @@ WebDriver driver;
 	public void CirclesSwitch() {
 		
 		//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/switch/login");
-		driver.get("https://staging.circles.asia/switch/plan");
+		driver.get("https://www.circles.life/switch/login");
 		//driver.get("https://www.circles.life/");
 		
 		
@@ -123,7 +124,7 @@ WebDriver driver;
 		}
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

@@ -64,12 +64,12 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		jse.executeScript("window.scrollBy(0,250)", "");
+		jse.executeScript("window.scrollBy(0,300)", "");
 		
 		pdriver.findElement(By.xpath("//span[text()='9:00 - 1:00 PM']")).click();
 		
 		
-		WebElement NRIC = pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[1]/div/div/select"));
+		WebElement NRIC = pdriver.findElement(By.xpath("//select[@name='docType']"));
 		Select ID = new Select(NRIC);
 		ID.selectByValue("NRIC");
 		pdriver.findElement(By.xpath("//input[@name='nric']")).sendKeys(nric);
@@ -82,7 +82,9 @@ public WebDriver pdriver;
 		}
 		*/
 		
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[3]/div[2]/div[1]/div")).click();
+		jse.executeScript("window.scrollBy(0,400)", "");
+		
+		pdriver.findElement(By.xpath("//div[@class= 'col-xs-6'][1]")).click();
 
 		uploadFile uf = new uploadFile(pdriver);
 		uf.Uploadfile();
@@ -94,7 +96,7 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		pdriver.findElement(By.cssSelector("#st-container > div > div > div:nth-child(2) > span > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div")).click();
+		pdriver.findElement(By.cssSelector("//div[@class= 'col-xs-6'][2]")).click();
 		uf.Uploadfile();
 		
 		try {
