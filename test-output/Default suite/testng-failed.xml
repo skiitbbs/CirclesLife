@@ -5,8 +5,9 @@
     <classes>
       <class name="testCases.TestCase1">
         <methods>
+          <include name="browserclose"/>
+          <include name="portinUser"/>
           <include name="getBrowser"/>
-          <include name="normalflow"/>
         </methods>
       </class> <!-- testCases.TestCase1 -->
     </classes>

@@ -26,24 +26,25 @@ WebDriver driver;
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
-	driver.get("https://shop.circles.life/login");
+	driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
+	//driver.get("https://shop.circles.life/login");
 	
 	return driver;
      }
 	
 	
-	@Test
+	@Test (priority=1)
 	public void normalflow() {
-		//driver.get("https://staging.circles.asia/login");
+		driver.get("https://staging.circles.asia/login");
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
+		/*
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();
 		
-		/*
+		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
 		
@@ -56,18 +57,21 @@ WebDriver driver;
 		//login.logout();
 	}
 	
-	//@Test
+	//@Test (priority=3)
 	public void testcase2() {
 		driver.get("https://staging.circles.asia/login");
+		//driver.get("https://shop.circles.life/login");
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
 		mobileDevice md = new mobileDevice(driver);
-		//md.fullpayment();
+		md.fullpayment();
 		//md.installment();
-		md.splitpayment();
+		//md.splitpayment();
 		
+		paymentPage pg = new paymentPage(driver);
+		pg.PaymentPage();
 		
 	}
 	
@@ -83,12 +87,12 @@ WebDriver driver;
 	
 	
 	
-	//@Test
+	//@Test //(priority=4)
 	public void CirclesSwitch() {
 		
 		//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/switch/login");
-		driver.get("https://www.circles.life/switch/login");
-		//driver.get("https://www.circles.life/");
+		//driver.get("https://www.circles.life/switch/login");
+		driver.get("https://staging.circles.asia/switch/login");
 		
 		
 		circleSwitchFlow csf = new circleSwitchFlow(driver);
@@ -105,6 +109,7 @@ WebDriver driver;
 	public void portinUser() {
 		
 		driver.get("https://staging.circles.asia/login");
+		//driver.get("https://shop.circles.life/login");
 		
 		logIn login = new logIn(driver);
 		login.login();
@@ -124,7 +129,7 @@ WebDriver driver;
 		}
 	}
 	
-	//@AfterTest
+	@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

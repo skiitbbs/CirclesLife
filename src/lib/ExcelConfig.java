@@ -2,6 +2,7 @@ package lib;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -42,5 +43,24 @@ public class ExcelConfig {
 				
 				return data;
 	}
+	
+		public void WriteExcel(String excelPath) {
+		
+			try {
+			File src = new File(excelPath);
+			sheet1 = wb.getSheetAt(0);
+			
+			sheet1.getRow(0).createCell(1).setCellValue("Pass");
+			
+			FileOutputStream fout = new FileOutputStream(src);
+			wb.write(fout);
+			wb.close(); 
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} //Try catch surrounding is basically used to avoid exceptional error.
+		
+			
+		}
 
 }

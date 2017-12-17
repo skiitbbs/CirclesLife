@@ -12,6 +12,7 @@ public class mobileDevice {
 	public mobileDevice(WebDriver driver) {
 		pdriver = driver;
 	}
+		
 	
 	public void fullpayment() {
 		
@@ -23,8 +24,23 @@ public class mobileDevice {
 		pdriver.findElement(By.xpath("//span[@class='text-primary']")).click(); //Mobile Selection.
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[3]/div/div[2]/div")).click(); //color selection.
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div/div/div")).click(); //Memory selection
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[5]/div[2]/div/div[1]/div")).click(); //Payment Selection
+		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[5]/div[2]/div/div[1]/div/div/div[1]")).click(); //Payment Selection
 		pdriver.findElement(By.xpath("//a[@action='PUSH']")).click(); //Process to Order
+		
+		deliveryInfo di = new deliveryInfo(pdriver);
+		di.DeliveyInfo();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		//*[@id="st-container"]/div/div/div[2]/span/div/div/footer/div/div/div/div
+		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		
+		
 	}
 	
 	public void installment() {

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import lib.ExcelConfig;
 import lib.ExcelData;
 
 
@@ -40,6 +41,10 @@ public class logIn {
 		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys(email);
 		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
+		excel.WriteExcel("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
+		
 		
 		
 		try {

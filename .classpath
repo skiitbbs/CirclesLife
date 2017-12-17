@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="/Users/sumitkumar/Downloads/Automation/poi-3.17/All jar file/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="/Users/sumitkumar/Downloads/Automation/poi-3.17/All jar file/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/sumitkumar/Downloads/Automation/javax.mail-api-1.5.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

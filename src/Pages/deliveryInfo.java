@@ -56,7 +56,7 @@ public WebDriver pdriver;
 		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		
-		pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][2]")).click();
+		pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][4]")).click();
 		
 		try {
 			Thread.sleep(4000);
@@ -72,7 +72,7 @@ public WebDriver pdriver;
 		WebElement NRIC = pdriver.findElement(By.xpath("//select[@name='docType']"));
 		Select ID = new Select(NRIC);
 		ID.selectByValue("NRIC");
-		pdriver.findElement(By.xpath("//input[@name='nric']")).sendKeys(nric);
+		pdriver.findElement(By.xpath("//input[@name='nric']")).sendKeys("S8927668C");
 		
 		/*
 		try {
@@ -96,7 +96,8 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		pdriver.findElement(By.cssSelector("//div[@class= 'col-xs-6'][2]")).click();
+		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/div[2]/div/div/div/div[4]/div[2]/div[3]/div[2]/div[2]/div")).click();
+		//pdriver.findElement(By.cssSelector("//div[@class= 'col-xs-6'][2]")).click();
 		uf.Uploadfile();
 		
 		try {

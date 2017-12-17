@@ -35,8 +35,9 @@ public class normalUser {
 		e.printStackTrace();
 	}
 	
-	pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/footer/div/div/div/div")).click();
-	
+	pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+	//*[@id="st-container"]/div/div/div[2]/span/div/div/footer/div/div/div/div
+	pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
 	}
 	
 	
