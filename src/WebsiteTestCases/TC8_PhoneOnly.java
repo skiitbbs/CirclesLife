@@ -5,12 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.PhoneOnly;
 import Pages.logIn;
-import Pages.mobileDevice;
 import Pages.paymentPage;
-import Pages.portInFlow;
 
-public class TC6_PortInAndPhone {
+public class TC8_PhoneOnly {
 	
 	WebDriver driver;
 	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
@@ -31,27 +30,16 @@ public class TC6_PortInAndPhone {
      }
 	
 	@Test
-	public void simandphone() {
+	public void phoneOnly() {
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
-		mobileDevice md = new mobileDevice(driver);
-		md.fullpayment();
-		
-		portInFlow pf = new portInFlow(driver);
-		pf.portin();
+		PhoneOnly po = new PhoneOnly(driver);
+		po.phoneonly();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
-		
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-				e.printStackTrace();
-		}
-		
-	login.logout();
 		
 	}
 

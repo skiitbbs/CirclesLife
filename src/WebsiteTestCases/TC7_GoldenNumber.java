@@ -5,12 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.GoldenNumber;
 import Pages.logIn;
-import Pages.mobileDevice;
+import Pages.normalUser;
 import Pages.paymentPage;
-import Pages.portInFlow;
 
-public class TC6_PortInAndPhone {
+public class TC7_GoldenNumber {
 	
 	WebDriver driver;
 	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
@@ -31,16 +31,16 @@ public class TC6_PortInAndPhone {
      }
 	
 	@Test
-	public void simandphone() {
+	public void goldenNumber() {
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
-		mobileDevice md = new mobileDevice(driver);
-		md.fullpayment();
+		GoldenNumber gn = new GoldenNumber(driver);
+		gn.goldenNumber();
 		
-		portInFlow pf = new portInFlow(driver);
-		pf.portin();
+		normalUser nu = new normalUser(driver);
+		nu.NormalUser();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
@@ -50,8 +50,7 @@ public class TC6_PortInAndPhone {
 		} catch (InterruptedException e) {
 				e.printStackTrace();
 		}
-		
-	login.logout();
+		login.logout();
 		
 	}
 

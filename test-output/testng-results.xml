@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="91506" started-at="2017-12-19T09:11:03Z" finished-at="2017-12-19T09:12:34Z">
+  <suite name="Default suite" duration-ms="44288" started-at="2017-12-19T15:50:51Z" finished-at="2017-12-19T15:51:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="91506" started-at="2017-12-19T09:11:03Z" finished-at="2017-12-19T09:12:34Z">
-      <class name="WebsiteTestCases.TC5_SimAndPhone">
-        <test-method status="PASS" signature="getBrowser()[pri:0, instance:WebsiteTestCases.TC5_SimAndPhone@d8355a8]" name="getBrowser" is-config="true" duration-ms="34702" started-at="2017-12-19T17:11:03Z" finished-at="2017-12-19T17:11:37Z">
+    <test name="Default test" duration-ms="44288" started-at="2017-12-19T15:50:51Z" finished-at="2017-12-19T15:51:36Z">
+      <class name="WebsiteTestCases.TC8_PhoneOnly">
+        <test-method status="PASS" signature="getBrowser()[pri:0, instance:WebsiteTestCases.TC8_PhoneOnly@d8355a8]" name="getBrowser" is-config="true" duration-ms="6828" started-at="2017-12-19T23:50:51Z" finished-at="2017-12-19T23:50:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="simandphone()[pri:0, instance:WebsiteTestCases.TC5_SimAndPhone@d8355a8]" name="simandphone" duration-ms="56779" started-at="2017-12-19T17:11:37Z" finished-at="2017-12-19T17:12:34Z">
+        <test-method status="PASS" signature="phoneOnly()[pri:0, instance:WebsiteTestCases.TC8_PhoneOnly@d8355a8]" name="phoneOnly" duration-ms="37436" started-at="2017-12-19T23:50:58Z" finished-at="2017-12-19T23:51:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- simandphone -->
-      </class> <!-- WebsiteTestCases.TC5_SimAndPhone -->
+        </test-method> <!-- phoneOnly -->
+      </class> <!-- WebsiteTestCases.TC8_PhoneOnly -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
