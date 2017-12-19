@@ -40,11 +40,11 @@ WebDriver driver;
 		logIn login = new logIn(driver);
 		login.login();
 		
-		/*
+		
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();
 		
-		
+		/*
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
 		
@@ -129,7 +129,7 @@ WebDriver driver;
 		}
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

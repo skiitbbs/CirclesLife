@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12016" started-at="2017-12-17T15:08:37Z" finished-at="2017-12-17T15:08:49Z">
+  <suite name="Default suite" duration-ms="91506" started-at="2017-12-19T09:11:03Z" finished-at="2017-12-19T09:12:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12016" started-at="2017-12-17T15:08:37Z" finished-at="2017-12-17T15:08:49Z">
-      <class name="testCases.TestCase1">
-        <test-method status="PASS" signature="getBrowser()[pri:0, instance:testCases.TestCase1@59fa1d9b]" name="getBrowser" is-config="true" duration-ms="5486" started-at="2017-12-17T23:08:37Z" finished-at="2017-12-17T23:08:43Z">
+    <test name="Default test" duration-ms="91506" started-at="2017-12-19T09:11:03Z" finished-at="2017-12-19T09:12:34Z">
+      <class name="WebsiteTestCases.TC5_SimAndPhone">
+        <test-method status="PASS" signature="getBrowser()[pri:0, instance:WebsiteTestCases.TC5_SimAndPhone@d8355a8]" name="getBrowser" is-config="true" duration-ms="34702" started-at="2017-12-19T17:11:03Z" finished-at="2017-12-19T17:11:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="normalflow()[pri:1, instance:testCases.TestCase1@59fa1d9b]" name="normalflow" duration-ms="6402" started-at="2017-12-17T23:08:43Z" finished-at="2017-12-17T23:08:49Z">
+        <test-method status="PASS" signature="simandphone()[pri:0, instance:WebsiteTestCases.TC5_SimAndPhone@d8355a8]" name="simandphone" duration-ms="56779" started-at="2017-12-19T17:11:37Z" finished-at="2017-12-19T17:12:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- normalflow -->
-        <test-method status="PASS" signature="browserclose()[pri:0, instance:testCases.TestCase1@59fa1d9b]" name="browserclose" is-config="true" duration-ms="111" started-at="2017-12-17T23:08:49Z" finished-at="2017-12-17T23:08:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserclose -->
-      </class> <!-- testCases.TestCase1 -->
+        </test-method> <!-- simandphone -->
+      </class> <!-- WebsiteTestCases.TC5_SimAndPhone -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

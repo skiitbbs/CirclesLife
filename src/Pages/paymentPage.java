@@ -24,7 +24,7 @@ public class paymentPage {
 		String cvv = data.getcvv();
 		String name = data.getname();
 
-		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		pdriver.findElement(By.xpath("//*[@id=\'logo\']")).click();
 		pdriver.findElement(By.xpath("//*[@id=\'creditCardNum\']")).sendKeys("4111111111111111");
@@ -34,6 +34,12 @@ public class paymentPage {
 		
 		pdriver.findElement(By.xpath("//input[@id='creditCardCvv2']")).sendKeys(cvv);
 		pdriver.findElement(By.xpath("//*[@id=\'creditCardName\']")).sendKeys(name);
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
 		pdriver.findElement(By.xpath("//*[@id=\'submitBtn\']")).click();
 		

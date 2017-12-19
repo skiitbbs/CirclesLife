@@ -12,14 +12,16 @@ public class ExcelConfig {
 	
 	XSSFWorkbook wb;
 	XSSFSheet sheet1;
+	File src;
 	DataFormatter df = new DataFormatter();
+	
 	public ExcelConfig(String excelPath){
 		
 		//This method is going to initiate the objects present in FileInputStream and WorkBook class.
 		//Initiated object is going to use to read the excel data from provided getData.
 		
 		try {
-			File src = new File(excelPath);
+			src = new File(excelPath);
 			
 			FileInputStream fis = new FileInputStream(src);
 			
@@ -28,6 +30,7 @@ public class ExcelConfig {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} //Try catch surrounding is basically used to avoid exceptional error.
+		
 		
 	}
 	
@@ -43,24 +46,5 @@ public class ExcelConfig {
 				
 				return data;
 	}
-	
-		public void WriteExcel(String excelPath) {
-		
-			try {
-			File src = new File(excelPath);
-			sheet1 = wb.getSheetAt(0);
-			
-			sheet1.getRow(0).createCell(1).setCellValue("Pass");
-			
-			FileOutputStream fout = new FileOutputStream(src);
-			wb.write(fout);
-			wb.close(); 
-			
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} //Try catch surrounding is basically used to avoid exceptional error.
-		
-			
-		}
 
 }

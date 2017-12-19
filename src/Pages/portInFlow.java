@@ -35,6 +35,12 @@ WebDriver pdriver;
 				e.printStackTrace();
 		}
 		
+		/*
+		pdriver.findElement(By.xpath("//div[@class='default-phone']")).click();
+		mobileDevice md = new mobileDevice(pdriver);
+		md.fullpayment();
+		*/
+		
 		deliveryInfo dp = new deliveryInfo(pdriver);
 		dp.DeliveyInfo();
 		

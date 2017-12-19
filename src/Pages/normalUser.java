@@ -23,8 +23,15 @@ public class normalUser {
 		e.printStackTrace();
 	}
 	
-	pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/footer/div/div/div/div")).click();
-	pdriver.findElement(By.xpath("//a[@action='PUSH']")).click();
+	/*
+	mobileDevice md = new mobileDevice(pdriver);
+	md.fullpayment();
+	*/
+	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
+	
+	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
+	//pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+	
 	
 	deliveryInfo di = new deliveryInfo(pdriver);
 	di.DeliveyInfo();
@@ -35,9 +42,17 @@ public class normalUser {
 		e.printStackTrace();
 	}
 	
-	pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
-	//*[@id="st-container"]/div/div/div[2]/span/div/div/footer/div/div/div/div
-	pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+	//pdriver.findElement(By.xpath("//a[@action='PUSH']")).click();
+	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
+	
+	//pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
+	
+	try {
+		Thread.sleep(1000);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	
 	}
 	
 	

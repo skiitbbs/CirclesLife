@@ -4,12 +4,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import lib.ExcelConfig;
 import lib.ExcelData;
+import lib.WriteResult;
 
 
 public class logIn {
@@ -42,11 +41,6 @@ public class logIn {
 		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//button[@type='submit']")).click();
 		
-		ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
-		excel.WriteExcel("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
-		
-		
-		
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -54,6 +48,15 @@ public class logIn {
 		}
 		
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='pocket-button']")));
+		
+		System.out.println("User logged into website");
+		
+		int count = 0;
+		
+		WriteResult wr = new WriteResult("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
+		wr.getcount(count);
+		wr.writeresult();
+		
 		
 		/*
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[1]/div/div/div[2]/div/a[6]/div")).click();
