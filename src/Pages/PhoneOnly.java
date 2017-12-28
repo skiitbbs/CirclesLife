@@ -10,11 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class PhoneOnly {
 	
 	public WebDriver pdriver;
-	public WebDriverWait wait;
 	
 	public PhoneOnly(WebDriver driver) {
 		pdriver = driver;
-		wait = new WebDriverWait(pdriver, 30); 
+		
 	}
 	
 	public void phoneonly() {

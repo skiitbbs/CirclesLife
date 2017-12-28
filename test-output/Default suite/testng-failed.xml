@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="WebsiteTestCases.TC8_PhoneOnly">
+      <class name="WebsiteTestCases.TC4_PortIn">
         <methods>
-          <include name="phoneOnly"/>
           <include name="getBrowser"/>
+          <include name="portinUser"/>
         </methods>
-      </class> <!-- WebsiteTestCases.TC8_PhoneOnly -->
+      </class> <!-- WebsiteTestCases.TC4_PortIn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

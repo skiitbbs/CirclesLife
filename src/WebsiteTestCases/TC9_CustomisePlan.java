@@ -1,5 +1,6 @@
 package WebsiteTestCases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
@@ -10,13 +11,13 @@ import Admin.Login;
 import Admin.OrderDelivery;
 import Admin.OrderRefNumber;
 import Admin.PlanSwitch;
+import Pages.CustomisePlan;
+import Pages.deliveryInfo;
 import Pages.logIn;
-import Pages.mobileDevice;
-import Pages.normalUser;
 import Pages.paymentPage;
 
-public class TC5_SimAndPhone {
-	
+public class TC9_CustomisePlan {
+
 	WebDriver driver;
 	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
 	String url = "https://staging.circles.asia/login";
@@ -36,18 +37,16 @@ public class TC5_SimAndPhone {
      }
 	
 	@Test
-	public void simandphone() {
+	public void customisePlan() {
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
-		mobileDevice md = new mobileDevice(driver);
-		md.before();
-		md.fullpayment();
-		md.after();
+		CustomisePlan cp = new CustomisePlan(driver);
+		cp.customisePlan();
 		
-		normalUser nu = new normalUser(driver);
-		nu.NormalUser();
+		deliveryInfo di = new deliveryInfo(driver);
+		di.DeliveyInfo();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
@@ -78,8 +77,7 @@ public class TC5_SimAndPhone {
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
 		
-		//login.logout();
-		
 	}
-
+	
+	
 }

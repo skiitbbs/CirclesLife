@@ -69,17 +69,17 @@ public class ExcelData {
 	}
 	
 	public String getadminemail() {
-		String ademail = excel.getData(1, 1, 3);
+		String ademail = excel.getData(1, 0, 1);
 		return ademail;
 	}
 	
 	public String getadminpass() {
-		String adpass = excel.getData(1, 2, 3);
+		String adpass = excel.getData(1, 1, 1);
 		return adpass;
 	}
 	
 	public String getorderno() {
-		String orderref = excel.getData(1, 3, 3);
+		String orderref = excel.getData(2, 3, 3);
 		return orderref;
 	}
 	

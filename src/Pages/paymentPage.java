@@ -27,6 +27,7 @@ public class paymentPage {
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		pdriver.findElement(By.xpath("//*[@id=\'logo\']")).click();
+		//pdriver.findElement(By.xpath("//*[@id=\'creditCardNum\']")).sendKeys("4096362019853861"); //Live Credentials
 		pdriver.findElement(By.xpath("//*[@id=\'creditCardNum\']")).sendKeys("4111111111111111");
 		
 		WebElement month = pdriver.findElement(By.xpath("//select[@name='expMonth']")); Select ExpMon = new Select(month); ExpMon.selectByValue("06");

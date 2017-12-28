@@ -22,14 +22,16 @@ public class AdminTC {
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	driver.get("borg.circles.asia:6180");
+	//driver.get("borg.circles.asia:6180");
 	//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
 	//driver.get("https://www.circles.life/");
+	
+	driver.get("https://kirk.circles.asia:7443");
 	
 	return driver;
      }
 	
-	@Test
+	//@Test
 	public void admin() {
 		
 		Login li = new Login(driver);
@@ -44,6 +46,13 @@ public class AdminTC {
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
 		
+	}
+	
+	@Test
+	public void deleteKirk() {
+		
+		KirkDelete kd = new KirkDelete();
+		kd.kirkdelete();
 	}
 	
 	@AfterTest

@@ -5,6 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Admin.DocApproval;
+import Admin.Login;
+import Admin.OrderDelivery;
+import Admin.OrderRefNumber;
+import Admin.PlanSwitch;
 import Pages.logIn;
 import Pages.mobileDevice;
 import Pages.paymentPage;
@@ -37,7 +42,9 @@ public class TC6_PortInAndPhone {
 		login.login();
 		
 		mobileDevice md = new mobileDevice(driver);
+		md.before();
 		md.fullpayment();
+		md.after();
 		
 		portInFlow pf = new portInFlow(driver);
 		pf.portin();
@@ -51,7 +58,27 @@ public class TC6_PortInAndPhone {
 				e.printStackTrace();
 		}
 		
-	login.logout();
+		OrderRefNumber orn = new OrderRefNumber(driver);
+		orn.orderRefnumber();
+		orn.writeOrder();
+		
+		System.out.println("Order Ref number called in test case.");
+		
+		driver.get("borg.circles.asia:6180");
+		
+		Login li = new Login(driver);
+		li.login();
+		
+		DocApproval da = new DocApproval(driver);
+		da.docapprove();
+		
+		OrderDelivery del = new OrderDelivery(driver);
+		del.orderdelivery();
+		
+		PlanSwitch ps = new PlanSwitch(driver);
+		ps.planswitch();
+		
+		//login.logout();
 		
 	}
 

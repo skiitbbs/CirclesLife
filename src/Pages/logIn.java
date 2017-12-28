@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import lib.ExcelData;
-import lib.WriteResult;
+//import lib.WriteResult;
 
 
 public class logIn {
@@ -22,8 +22,6 @@ public class logIn {
 	}
 	
 		///Users/sumitkumar/eclipse-workspace/CirclesLife/src/lib/Test-Sheet.numbers
-	
-		
 		//Below line of excel code is going to import the data from excel.
 		ExcelData data = new ExcelData();
 		String email = data.getemail();
@@ -35,7 +33,8 @@ public class logIn {
 		
 		//WebElement login = pdriver.findElement(By.xpath("//a[@href='https://shop.circles.life/login']"));
 		//login.click();
-		
+		//a[href='#']
+		//button[@id='ingressfailed']
 		//pdriver.findElement(By.xpath("//*[@id=\'site-navigation\']/div[1]/div[2]/div/a[2]")).click();
 		pdriver.findElement(By.xpath("//input[@name='email']")).sendKeys(email);
 		pdriver.findElement(By.xpath("//input[@name='password']")).sendKeys(pass);
@@ -51,6 +50,7 @@ public class logIn {
 		
 		System.out.println("User logged into website");
 		
+		/*
 		int count = 0;
 		
 		WriteResult wr = new WriteResult("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");

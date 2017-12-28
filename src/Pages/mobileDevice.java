@@ -22,7 +22,9 @@ public class mobileDevice {
 	}
 	
 	public void after() {
-		pdriver.findElement(By.xpath("//a[@action='PUSH']")).click(); //Process to Order
+		
+		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		//pdriver.findElement(By.xpath("//a[@action='PUSH']")).click(); //Process to Order
 		
 		try {
 			Thread.sleep(1000);
@@ -30,7 +32,7 @@ public class mobileDevice {
 			e.printStackTrace();
 		}
 		
-		//pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click(); //Pre-Checkout page
 
 	}
 	

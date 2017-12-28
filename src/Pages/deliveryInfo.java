@@ -107,6 +107,7 @@ public WebDriver pdriver;
 		}
 		
 		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		
 		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
 		
 	}

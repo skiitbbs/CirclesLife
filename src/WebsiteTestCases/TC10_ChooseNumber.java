@@ -10,12 +10,12 @@ import Admin.Login;
 import Admin.OrderDelivery;
 import Admin.OrderRefNumber;
 import Admin.PlanSwitch;
+import Pages.ChooseNumber;
+import Pages.deliveryInfo;
 import Pages.logIn;
-import Pages.mobileDevice;
-import Pages.normalUser;
 import Pages.paymentPage;
 
-public class TC5_SimAndPhone {
+public class TC10_ChooseNumber {
 	
 	WebDriver driver;
 	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
@@ -36,18 +36,16 @@ public class TC5_SimAndPhone {
      }
 	
 	@Test
-	public void simandphone() {
+	public void chooseNumber() {
 		
 		logIn login = new logIn(driver);
 		login.login();
 		
-		mobileDevice md = new mobileDevice(driver);
-		md.before();
-		md.fullpayment();
-		md.after();
+		ChooseNumber cn = new ChooseNumber(driver);
+		cn.chooseNumber();
 		
-		normalUser nu = new normalUser(driver);
-		nu.NormalUser();
+		deliveryInfo di = new deliveryInfo(driver);
+		di.DeliveyInfo();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
@@ -77,8 +75,6 @@ public class TC5_SimAndPhone {
 		
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
-		
-		//login.logout();
 		
 	}
 

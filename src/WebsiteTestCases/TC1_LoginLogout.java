@@ -6,6 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Admin.OrderRefNumber;
 import Pages.logIn;
 
 public class TC1_LoginLogout {
@@ -33,9 +34,13 @@ public class TC1_LoginLogout {
 		logIn login = new logIn(driver);
 		login.login();
 		
+		OrderRefNumber orn = new OrderRefNumber(driver);
+		orn.orderRefnumber();
+		orn.writeOrder();
+		
 	}
 	
-	@Test
+	//@Test
 	public void logout() {
 		
 		driver.get("https://staging.circles.asia/login");
