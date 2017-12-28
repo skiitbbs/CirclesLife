@@ -6,9 +6,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import lib.ExcelData;
+
 public class KirkDelete {
 
 	public WebDriver pdriver;
+	ExcelData data = new ExcelData();
+	
+	String email = data.getadminemail();
+	String pass = data.getrikerpass();
+	
+	/*
+	String Auth = data.getauthurl();
+	String url = data.getstagurl();
+	String borgurl = data.getborgurl();
+	String url = data.getprodurl();
+	String vulcurl = data.getvulcanurl();
+	String rikerurl = data.getrikerurl();
+	String kirkurl = data.getkirkurl();
+	
+	*/
 	
 	public KirkDelete(WebDriver driver) {
 		pdriver = driver;
@@ -18,9 +35,9 @@ public class KirkDelete {
 		
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[1]")).sendKeys("sumit@circles.asia");
-		//pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys("Sumit@circles@12");
-		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys("Sumit@123");
+		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[1]")).sendKeys(email);
+		//pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys(pass;
+		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/button")).click(); 
 		
 		try {
@@ -55,8 +72,14 @@ public class KirkDelete {
 			e.printStackTrace();
 		}
 		
-		pdriver.findElement(By.cssSelector("//tr[@class='odd']/td[8]/a[i[@class='fa fa-trash-o']]")).click();
 	}
 	
-	
+	public void delete() {
+		pdriver.findElement(By.cssSelector("[id^='trash']")).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

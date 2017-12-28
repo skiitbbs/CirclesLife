@@ -6,10 +6,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Admin.KirkDelete;
+import lib.ExcelData;
 
 public class KirkTestCase {
 	
 	WebDriver driver;
+	ExcelData data = new ExcelData();
+	String rikerurl = data.getrikerurl();
+	KirkDelete kd;
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -21,17 +25,18 @@ public class KirkTestCase {
 		
 		System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 		driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
-		driver.get("https://riker.circles.asia:7443");
+		driver.get(rikerurl);
 		//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
 		//driver.get("https://www.circles.life/");
-	return driver;
+		
+		kd = new KirkDelete(driver);
+		kd.kirkdelete();
+		return driver;
      }
 	
-	@Test
+	@Test (invocationCount = 4)
 	public void testkirkdelete() {
-		
-		KirkDelete kd = new KirkDelete(driver);
-		kd.kirkdelete();
+		kd.delete();
 	}
 
 }
