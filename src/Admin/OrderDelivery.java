@@ -38,10 +38,12 @@ public class OrderDelivery {
 		
 		
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+		jse.executeScript("window.scrollBy(0,300)", "");
 		
 		pdriver.findElement(By.xpath("html/body/div[1]/div/div/div[2]/div[2]/table/tbody/tr/td[3]/button")).click();
 		pdriver.findElement(By.xpath("html/body/div[1]/div/div/div[2]/div[3]/div/div/div[2]/div/div[3]/ul/li[9]/a")).click();
@@ -52,7 +54,6 @@ public class OrderDelivery {
 			e.printStackTrace();
 		}
 		
-		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
 		jse.executeScript("window.scrollBy(0,400)", "");
 		
 		pdriver.findElement(By.xpath("html/body/div[1]/div/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div/div[9]/div/div[2]/div[5]/div[2]/form[1]/input[2]")).click();

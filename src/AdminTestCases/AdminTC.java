@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Admin.DocApproval;
+import Admin.KirkDelete;
 import Admin.Login;
 import Admin.OrderDelivery;
 import Admin.PlanSwitch;
@@ -22,40 +23,41 @@ public class AdminTC {
 	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
-	//driver.get("borg.circles.asia:6180");
+	driver.get("borg.circles.asia:6180");
 	//driver.get("https://circles-admin:123qweAadmin@staging.circles.asia/login");
 	//driver.get("https://www.circles.life/");
 	
-	driver.get("https://kirk.circles.asia:7443");
+	//driver.get("https://kirk.circles.asia:7443");
 	
 	return driver;
      }
 	
-	//@Test
+	@Test
 	public void admin() {
 		
 		Login li = new Login(driver);
 		li.login();
 		
+		/*
 		DocApproval da = new DocApproval(driver);
 		da.docapprove();
-		
+		*/
 		OrderDelivery del = new OrderDelivery(driver);
 		del.orderdelivery();
-		
+		/*
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
-		
+		*/
 	}
 	
-	@Test
+	//@Test
 	public void deleteKirk() {
 		
-		KirkDelete kd = new KirkDelete();
+		KirkDelete kd = new KirkDelete(driver);
 		kd.kirkdelete();
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

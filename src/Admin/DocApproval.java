@@ -32,13 +32,11 @@ public class DocApproval {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Order ref number is : "+ order);
-		
 		pdriver.findElement(By.xpath("//*[@id=\"pjax-container\"]/div/div/div[1]/ul/li[5]/a")).click();
 		//pdriver.findElement(By.xpath("//*[@id=\'orders_table\']/table/thead/tr/th[2]/a")).click();
 		
 		try {
-			Thread.sleep(6000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

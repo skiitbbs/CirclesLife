@@ -68,6 +68,11 @@ public class ExcelData {
 	return name;
 	}
 	
+	public String getorderno() {
+		String orderref = excel.getData(2, 3, 3);
+		return orderref;
+	}
+	
 	public String getadminemail() {
 		String ademail = excel.getData(1, 0, 1);
 		return ademail;
@@ -78,10 +83,54 @@ public class ExcelData {
 		return adpass;
 	}
 	
-	public String getorderno() {
-		String orderref = excel.getData(2, 3, 3);
-		return orderref;
+	public String getvulcanpass() {
+		String vulcanpass = excel.getData(1, 2, 1);
+		return vulcanpass;
 	}
 	
+	public String getrikerpass() {
+		String rikerpass = excel.getData(1, 3, 1);
+		return rikerpass;
+	}
+	
+	public String getkirkpass() {
+		String kirkpass = excel.getData(1, 4, 1);
+		return kirkpass;
+	}
+	
+	public String getauthurl() {
+		String getauth = excel.getData(3, 0, 1);
+		return getauth;
+	}
+	
+	public String getstagurl() {
+		String getstagurl = excel.getData(3, 1, 1);
+		return getstagurl;
+	}
+	
+	public String getprodurl() {
+		String getprodurl = excel.getData(3, 2, 1);
+		return getprodurl;
+	}
+	
+	public String getborgurl() {
+		String getborgurl = excel.getData(3, 3, 1);
+		return getborgurl;
+	}
+	
+	public String getvulcanurl() {
+		String getvalcurl = excel.getData(3, 4, 1);
+		return getvalcurl;
+	}
+	
+	public String getrikerurl() {
+		String getrikerurl = excel.getData(3, 5, 1);
+		return getrikerurl;
+	}
+	
+	public String getkirkurl() {
+		String getkirkurl = excel.getData(3, 6, 1);
+		return getkirkurl;
+	}
 
 }

@@ -8,13 +8,23 @@ import org.testng.annotations.Test;
 
 import Admin.OrderRefNumber;
 import Pages.logIn;
+import lib.ExcelData;
 
 public class TC1_LoginLogout {
 	
 	WebDriver driver;
-	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
-	String url = "https://staging.circles.asia/login";
-	//String url = "https://shop.circles.life/login"
+	ExcelData data = new ExcelData();
+	String Auth = data.getauthurl();
+	String url = data.getstagurl();
+	
+	/*
+	String url = data.getprodurl();
+	String borgurl = data.getborgurl();
+	String vulcurl = data.getvulcanurl();
+	String rikerurl = data.getrikerurl();
+	String kirkurl = data.getkirkurl();
+	*/
+
 	
 	@BeforeTest
  	private WebDriver getBrowser() {
@@ -42,8 +52,6 @@ public class TC1_LoginLogout {
 	
 	//@Test
 	public void logout() {
-		
-		driver.get("https://staging.circles.asia/login");
 		
 		logIn login = new logIn(driver);
 		login.logout();

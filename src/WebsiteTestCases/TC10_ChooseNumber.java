@@ -14,14 +14,24 @@ import Pages.ChooseNumber;
 import Pages.deliveryInfo;
 import Pages.logIn;
 import Pages.paymentPage;
+import lib.ExcelData;
 
 public class TC10_ChooseNumber {
 	
 	WebDriver driver;
-	String Auth = "https://circles-admin:123qweAadmin@staging.circles.asia/login";
-	String url = "https://staging.circles.asia/login";
-	//String url = "https://shop.circles.life/login"
+	ExcelData data = new ExcelData();
+	String Auth = data.getauthurl();
+	String url = data.getstagurl();
+	String borgurl = data.getborgurl();
 	
+	/*
+	String url = data.getprodurl();
+	String borgurl = data.getborgurl();
+	String vulcurl = data.getvulcanurl();
+	String rikerurl = data.getrikerurl();
+	String kirkurl = data.getkirkurl();
+	*/
+
 	@BeforeTest
  	private WebDriver getBrowser() 
  	{
@@ -62,7 +72,7 @@ public class TC10_ChooseNumber {
 		
 		System.out.println("Order Ref number called in test case.");
 		
-		driver.get("borg.circles.asia:6180");
+		driver.get(borgurl);
 		
 		Login li = new Login(driver);
 		li.login();

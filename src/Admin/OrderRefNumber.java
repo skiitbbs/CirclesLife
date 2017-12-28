@@ -32,7 +32,7 @@ public class OrderRefNumber {
 				//System.out.println("Before code start.");
 				//String OrderRef = pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/div[2]/div/div/div/div/div[4]/div/span[2]")).getText();
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -42,36 +42,36 @@ public class OrderRefNumber {
 				//this.order = order;
 				
 			
-		return order;
-	}
+				return order;
+		}
 	
-	public void writeOrder() {
+		public void writeOrder() {
 		
-		try {
-			src = new File("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
+			try {
+				src = new File("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
 			
-			FileInputStream fis = new FileInputStream(src);
+				FileInputStream fis = new FileInputStream(src);
 			
 			 wb = new XSSFWorkbook(fis);
 			
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} //Try catch surrounding is basically used to avoid exceptional error.
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				} //Try catch surrounding is basically used to avoid exceptional error.
 		
-			// set order ref number
-			String orderId = orderRefnumber();
+				// set order ref number
+				String orderId = orderRefnumber();
 		
-			sheet1 = wb.getSheetAt(2);
-			sheet1.getRow(3).createCell(3).setCellValue(orderId);
-			System.out.println("Stored value = "+ orderId);
+				sheet1 = wb.getSheetAt(2);
+				sheet1.getRow(3).createCell(3).setCellValue(orderId);
+				System.out.println("Stored value = "+ orderId);
 	
-			try {
+				try {
 					fout = new FileOutputStream(src);
 					wb.write(fout);
 					wb.close(); 
-			} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} //Try catch surrounding is basically used to avoid exceptional error.
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				} //Try catch surrounding is basically used to avoid exceptional error.
 	
 	//return Order;
 		
