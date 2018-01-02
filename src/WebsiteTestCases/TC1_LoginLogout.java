@@ -13,6 +13,8 @@ import lib.ExcelData;
 public class TC1_LoginLogout {
 	
 	WebDriver driver;
+	//below lines of code is going to extract the information from excel file.
+	//Please use(Initialize) those data only which you want to use and assign accordingly
 	ExcelData data = new ExcelData();
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
@@ -44,10 +46,11 @@ public class TC1_LoginLogout {
 		logIn login = new logIn(driver);
 		login.login();
 		
+		/*
 		OrderRefNumber orn = new OrderRefNumber(driver);
 		orn.orderRefnumber();
 		orn.writeOrder();
-		
+		*/
 	}
 	
 	//@Test

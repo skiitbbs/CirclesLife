@@ -11,11 +11,12 @@ import lib.ExcelData;
 public class KirkDelete {
 
 	public WebDriver pdriver;
-	ExcelData data = new ExcelData();
 	
+	//below lines of code is going to extract the information from excel file.
+	//Please use(Initialize) those data only which you want to use and assign accordingly
+	ExcelData data = new ExcelData();
 	String email = data.getadminemail();
 	String pass = data.getrikerpass();
-	
 	/*
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
@@ -36,7 +37,6 @@ public class KirkDelete {
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[1]")).sendKeys(email);
-		//pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys(pass;
 		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys(pass);
 		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/button")).click(); 
 		

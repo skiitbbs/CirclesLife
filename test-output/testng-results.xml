@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20219" started-at="2017-12-28T18:07:47Z" finished-at="2017-12-28T18:08:07Z">
+  <suite name="Default suite" duration-ms="72258" started-at="2018-01-02T06:03:39Z" finished-at="2018-01-02T06:04:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20219" started-at="2017-12-28T18:07:47Z" finished-at="2017-12-28T18:08:07Z">
-      <class name="AdminTestCases.KirkTestCase">
-        <test-method status="PASS" signature="getBrowser()[pri:0, instance:AdminTestCases.KirkTestCase@9f116cc]" name="getBrowser" is-config="true" duration-ms="11911" started-at="2017-12-29T02:07:47Z" finished-at="2017-12-29T02:07:59Z">
+    <test name="Default test" duration-ms="72258" started-at="2018-01-02T06:03:39Z" finished-at="2018-01-02T06:04:51Z">
+      <class name="WebsiteTestCases.TC1_LoginLogout">
+        <test-method status="PASS" signature="getBrowser()[pri:0, instance:WebsiteTestCases.TC1_LoginLogout@12468a38]" name="getBrowser" is-config="true" duration-ms="68013" started-at="2018-01-02T14:03:39Z" finished-at="2018-01-02T14:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="testkirkdelete()[pri:0, instance:AdminTestCases.KirkTestCase@9f116cc]" name="testkirkdelete" duration-ms="2121" started-at="2017-12-29T02:07:59Z" finished-at="2017-12-29T02:08:01Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:WebsiteTestCases.TC1_LoginLogout@12468a38]" name="login" duration-ms="4066" started-at="2018-01-02T14:04:47Z" finished-at="2018-01-02T14:04:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testkirkdelete -->
-        <test-method status="PASS" signature="testkirkdelete()[pri:0, instance:AdminTestCases.KirkTestCase@9f116cc]" name="testkirkdelete" duration-ms="2053" started-at="2017-12-29T02:08:01Z" finished-at="2017-12-29T02:08:03Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:WebsiteTestCases.TC1_LoginLogout@12468a38]" name="browserclose" is-config="true" duration-ms="150" started-at="2018-01-02T14:04:51Z" finished-at="2018-01-02T14:04:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testkirkdelete -->
-        <test-method status="PASS" signature="testkirkdelete()[pri:0, instance:AdminTestCases.KirkTestCase@9f116cc]" name="testkirkdelete" duration-ms="2053" started-at="2017-12-29T02:08:03Z" finished-at="2017-12-29T02:08:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testkirkdelete -->
-        <test-method status="PASS" signature="testkirkdelete()[pri:0, instance:AdminTestCases.KirkTestCase@9f116cc]" name="testkirkdelete" duration-ms="2059" started-at="2017-12-29T02:08:05Z" finished-at="2017-12-29T02:08:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testkirkdelete -->
-      </class> <!-- AdminTestCases.KirkTestCase -->
+        </test-method> <!-- browserclose -->
+      </class> <!-- WebsiteTestCases.TC1_LoginLogout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

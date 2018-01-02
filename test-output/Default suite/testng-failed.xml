@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="WebsiteTestCases.TC3_SimOrder">
+      <class name="WebsiteTestCases.TC1_LoginLogout">
         <methods>
-          <include name="normalflow"/>
+          <include name="browserclose"/>
           <include name="getBrowser"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- WebsiteTestCases.TC3_SimOrder -->
+      </class> <!-- WebsiteTestCases.TC1_LoginLogout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,7 @@
 package Admin;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,7 +21,7 @@ public class PlanSwitch {
 	}
 	
 	public void planswitch() {
-		
+		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		pdriver.findElement(By.xpath("html/body/div[1]/div/div/div[1]/ul/li[4]/a")).click();
 		
 		ExcelData data = new ExcelData();

@@ -19,6 +19,9 @@ import lib.ExcelData;
 public class TC4_PortIn {
 	
 	WebDriver driver;
+	
+	//below lines of code is going to extract the information from excel file.
+	//Please use(Initialize) those data only which you want to use and assign accordingly	
 	ExcelData data = new ExcelData();
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
@@ -51,9 +54,6 @@ public class TC4_PortIn {
 		
 		portInFlow pf = new portInFlow(driver);
 		pf.portin();
-		
-		driver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img"));
-		driver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();

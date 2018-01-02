@@ -20,6 +20,8 @@ import lib.ExcelData;
 public class TC9_CustomisePlan {
 
 	WebDriver driver;
+	//below lines of code is going to extract the information from excel file.
+	//Please use(Initialize) those data only which you want to use and assign accordingly
 	ExcelData data = new ExcelData();
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();

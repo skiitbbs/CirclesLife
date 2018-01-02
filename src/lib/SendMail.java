@@ -147,6 +147,3 @@ return false;
 }
 }
 
-public class SendMail {
-
-}

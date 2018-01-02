@@ -9,7 +9,7 @@ import lib.ExcelData;
 
 public class portInFlow {
 	
-WebDriver pdriver;
+	WebDriver pdriver;
 	
 	public portInFlow(WebDriver driver) {
 		pdriver = driver;
@@ -22,14 +22,16 @@ WebDriver pdriver;
 		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		pdriver.findElement(By.xpath("//div[@class='pocket-button']")).click();
+		pdriver.findElement(By.xpath("//div[@class='pocket-button']")).click(); //click on 
 		pdriver.findElement(By.xpath("//input[@type='number']")).sendKeys(portin);
-		pdriver.findElement(By.xpath("//*[@id=\'number-select-container\']/div[2]/div/div[1]/div/div/div[2]/div[5]/div/div/div[1]/div/div[1]/div")).click();
+		pdriver.findElement(By.xpath("//*[@id=\"number-select-container\"]/div[2]/div/div[1]/div/div/div[2]/div[5]/div/div/div[1]/div/div[1]/div")).click();
 		pdriver.findElement(By.xpath("//*[@id=\"number-select-container\"]/div[2]/div/div[1]/div/div/div[2]/div[7]/div/div/div[1]/div/div[1]/div")).click();
+		pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
+		/*
 		pdriver.findElement(By.xpath("//*[@id=\'number-select-container\']/footer/div/div/div/a")).click();
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/footer/div/div/div/div")).click();
 		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/footer/div/div/div/a")).click();
-		
+		*/
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -41,11 +43,13 @@ WebDriver pdriver;
 		mobileDevice md = new mobileDevice(pdriver);
 		md.fullpayment();
 		*/
+		pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
+		pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
 		
 		deliveryInfo dp = new deliveryInfo(pdriver);
 		dp.DeliveyInfo();
 		
-		pdriver.findElement(By.xpath("//*[@id=\"st-container\"]/div/div/div[2]/span/div/footer/div/div/div/div")).click();
+		//pdriver.findElement(By.xpath("//*[@id=\"st-container\"]/div/div/div[2]/span/div/footer/div/div/div/div")).click();
 		
 	}
 
