@@ -1,4 +1,4 @@
-package lib;
+/*package lib;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -147,3 +147,4 @@ return false;
 }
 }
 
+*/
