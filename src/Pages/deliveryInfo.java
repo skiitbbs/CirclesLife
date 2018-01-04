@@ -66,8 +66,9 @@ public WebDriver pdriver;
 		
 		jse.executeScript("window.scrollBy(0,300)", "");
 		
-		pdriver.findElement(By.xpath("//span[text()='9:00 - 1:00 PM']")).click();
-		
+		System.out.println("trying to click slot");
+		pdriver.findElement(By.xpath("//div[@class='col-sm-4 col-xs-6 delivery-slots-time'][2]")).click();
+		System.out.println("clicked slot");
 		
 		WebElement NRIC = pdriver.findElement(By.xpath("//select[@name='docType']"));
 		Select ID = new Select(NRIC);
