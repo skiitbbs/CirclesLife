@@ -35,7 +35,7 @@ public class TC3_SimOrder {
  	private WebDriver getBrowser() 
  	{
 		
-	System.setProperty("webdriver.chrome.driver","//Users//sumitkumar//Downloads//Automation//chromedriver");
+	System.setProperty("webdriver.chrome.driver","//Users//ahalya//AUTOMATION//chromedriver");
 	driver= new ChromeDriver(); // Create a new instance for the Chrome Driver.
 	//driver.manage().window().maximize();
 	

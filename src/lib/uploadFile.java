@@ -21,7 +21,7 @@ public class uploadFile {
 		
 		public void Uploadfile() {
 			
-			File file = new File("//Users//sumitkumar//Desktop//Screenshots//Screenshot.png");
+			File file = new File("//Users//ahalya//Desktop//Screenshots//Screenshot.jpg");
 			StringSelection stringSelection= new StringSelection(file.getAbsolutePath());
 			 
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);

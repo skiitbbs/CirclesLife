@@ -2,7 +2,7 @@ package lib;
 
 public class ExcelData {
 	
-	ExcelConfig excel = new ExcelConfig("/Users/sumitkumar/git/CirclesLife/src/Test Data.xlsx");
+	ExcelConfig excel = new ExcelConfig("/Users/ahalya/git/CirclesLife/src/Test Data.xlsx");
 	public String getemail() {
 	String email = excel.getData(2, 1, 1);
 	return email;
