@@ -2,6 +2,7 @@ package WebsiteTestCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -89,6 +90,11 @@ public class TC7_GoldenNumber {
 		
 		//login.logout();
 		
+	}
+	
+	@AfterTest
+	public void browserclose() {
+		driver.close();
 	}
 
 }

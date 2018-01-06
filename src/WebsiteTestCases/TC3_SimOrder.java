@@ -2,6 +2,7 @@ package WebsiteTestCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -89,6 +90,11 @@ public class TC3_SimOrder {
 		ps.planswitch();
 		//login.logout();
 		//by end of this code, new normal mobile number has been generated.
+	}
+	
+	@AfterTest
+	public void browserclose() {
+		driver.close();
 	}
 
 }
