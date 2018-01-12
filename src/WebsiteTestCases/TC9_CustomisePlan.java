@@ -27,12 +27,6 @@ public class TC9_CustomisePlan {
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 	
 	
 	@BeforeTest

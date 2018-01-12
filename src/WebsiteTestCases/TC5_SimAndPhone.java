@@ -24,15 +24,10 @@ public class TC5_SimAndPhone {
 	//below lines of code is going to extract the information from excel file.
 	//Please use(Initialize) those data only which you want to use and assign accordingly
 	ExcelData data = new ExcelData();
+	
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -70,9 +65,11 @@ public class TC5_SimAndPhone {
 				e.printStackTrace();
 		}
 		
+		
 		OrderRefNumber orn = new OrderRefNumber(driver);
 		orn.orderRefnumber();
 		orn.writeOrder();
+		
 		
 		System.out.println("Order Ref number called in test case.");
 		
@@ -89,8 +86,6 @@ public class TC5_SimAndPhone {
 		
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
-		
-		//login.logout();
 		
 	}
 	

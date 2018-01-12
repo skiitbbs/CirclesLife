@@ -27,12 +27,6 @@ public class TC7_GoldenNumber {
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -88,7 +82,6 @@ public class TC7_GoldenNumber {
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
 		
-		//login.logout();
 		
 	}
 	

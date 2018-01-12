@@ -13,6 +13,26 @@ public class ExcelData {
 	return pass;
 	}
 	
+	public String getsname() {
+		String sname = excel.getData(2, 1, 4);
+		return sname;
+	}
+	
+	public String getslast() {
+		String slast = excel.getData(2, 2, 4);
+		return slast;
+	}
+	
+	public String getsemail() {
+		String semail = excel.getData(2, 3, 4);
+		return semail;
+	}
+	
+	public String getspass() {
+		String spass = excel.getData(2, 4, 4);
+		return spass;
+	}
+	
 	public String getmobile() {
 	String mobile = excel.getData(2, 3, 1);
 	return mobile;

@@ -26,12 +26,6 @@ public class TC8_PhoneOnly {
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -64,9 +58,11 @@ public class TC8_PhoneOnly {
 				e.printStackTrace();
 		}
 		
+	
 		OrderRefNumber orn = new OrderRefNumber(driver);
 		orn.orderRefnumber();
 		orn.writeOrder();
+		
 		
 		System.out.println("Order Ref number called in test case.");
 		

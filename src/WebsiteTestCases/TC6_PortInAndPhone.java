@@ -24,16 +24,10 @@ public class TC6_PortInAndPhone {
 	//below lines of code is going to extract the information from excel file.
 	//Please use(Initialize) those data only which you want to use and assign accordingly
 	ExcelData data = new ExcelData();
+	
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
-	
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -90,9 +84,7 @@ public class TC6_PortInAndPhone {
 		
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
-		
-		//login.logout();
-		
+
 	}
 	
 	@AfterTest

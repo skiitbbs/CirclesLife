@@ -25,14 +25,6 @@ public class TC10_ChooseNumber {
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	
-	/*
-	String url = data.getprodurl();
-	String borgurl = data.getborgurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 
 	@BeforeTest
  	private WebDriver getBrowser() 

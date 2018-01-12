@@ -6,7 +6,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Admin.OrderRefNumber;
 import Pages.logIn;
 import lib.ExcelData;
 
@@ -18,16 +17,7 @@ public class TC1_LoginLogout {
 	ExcelData data = new ExcelData();
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
-	
-	/*
-	String url = data.getprodurl();
-	String borgurl = data.getborgurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 
-	
 	@BeforeTest
  	private WebDriver getBrowser() {
 		
@@ -45,17 +35,10 @@ public class TC1_LoginLogout {
 		
 		logIn login = new logIn(driver);
 		login.login();
-		
-		/*
-		OrderRefNumber orn = new OrderRefNumber(driver);
-		orn.orderRefnumber();
-		orn.writeOrder();
-		*/
 	}
 	
-	//@Test
+	@Test
 	public void logout() {
-		
 		logIn login = new logIn(driver);
 		login.logout();
 	}

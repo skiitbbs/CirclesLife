@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class normalUser {
 	
@@ -23,10 +24,6 @@ public class normalUser {
 		e.printStackTrace();
 	}
 	
-	/*
-	mobileDevice md = new mobileDevice(pdriver);
-	md.fullpayment();
-	*/
 	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
 	
 	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();

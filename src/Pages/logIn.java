@@ -17,8 +17,8 @@ public class logIn {
 	public WebDriverWait wait;
 	
 	public logIn(WebDriver driver) {
-		pdriver = driver;
-		wait = new WebDriverWait(pdriver, 30); 
+		pdriver = driver; 
+		wait = new WebDriverWait(pdriver, 60);
 	}
 	
 		///Users/sumitkumar/eclipse-workspace/CirclesLife/src/lib/Test-Sheet.numbers
@@ -26,6 +26,10 @@ public class logIn {
 		ExcelData data = new ExcelData();
 		String email = data.getemail();
 		String pass = data.getpass();
+		String sname = data.getsname();
+		String slast = data.getslast();
+		String semail = data.getsemail();
+		String spass = data.getspass();
 		
 		public void login() {
 		
@@ -67,6 +71,20 @@ public class logIn {
 			e.printStackTrace();
 		}
 		*/
+		}
+		
+		public void signup() {
+			pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+			pdriver.findElement(By.xpath("//div[@class='container-fluid']/div/a[2]/div")).click();
+			pdriver.findElement(By.xpath("//input[@name='first_name']")).sendKeys(sname);
+			pdriver.findElement(By.xpath("//input[@name='last_name']")).sendKeys(slast);
+			pdriver.findElement(By.xpath("//div[@class='col-xs-12']/div/div/input[@name='email']")).sendKeys(semail);
+			pdriver.findElement(By.xpath("//div[@class='col-xs-12']/div/div/input[@name='password']")).sendKeys(spass);
+			pdriver.findElement(By.xpath("//div[@class='offset-xs-1 col-xs-10']/button[@type='submit']")).click();
+			
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='hidden-md-down']/div/a[6]")));
+			System.out.println("User has been successfully signup");
 		}
 		
 		public void logout() {

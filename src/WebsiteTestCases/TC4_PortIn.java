@@ -1,6 +1,5 @@
 package WebsiteTestCases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -24,15 +23,10 @@ public class TC4_PortIn {
 	//below lines of code is going to extract the information from excel file.
 	//Please use(Initialize) those data only which you want to use and assign accordingly	
 	ExcelData data = new ExcelData();
+	
 	String Auth = data.getauthurl();
 	String url = data.getstagurl();
 	String borgurl = data.getborgurl();
-	/*
-	String url = data.getprodurl();
-	String vulcurl = data.getvulcanurl();
-	String rikerurl = data.getrikerurl();
-	String kirkurl = data.getkirkurl();
-	*/
 	
 	@BeforeTest
  	private WebDriver getBrowser() 
@@ -47,7 +41,7 @@ public class TC4_PortIn {
 	return driver;
      }
 	
-	@Test
+	@Test //(invocationCount = 4)
 	public void portinUser() {
 		
 		logIn login = new logIn(driver);
@@ -65,11 +59,13 @@ public class TC4_PortIn {
 				e.printStackTrace();
 		}
 		
+		
 		OrderRefNumber orn = new OrderRefNumber(driver);
 		orn.orderRefnumber();
 		orn.writeOrder();
 		
 		System.out.println("Order Ref number called in test case.");
+		
 		
 		driver.get(borgurl);
 		

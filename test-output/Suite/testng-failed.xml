@@ -3,12 +3,19 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="WebsiteTestCases.TC8_PhoneOnly">
+      <class name="WebsiteTestCases.TC6_PortInAndPhone">
         <methods>
-          <include name="phoneOnly"/>
           <include name="getBrowser"/>
+          <include name="simandphone"/>
         </methods>
-      </class> <!-- WebsiteTestCases.TC8_PhoneOnly -->
+      </class> <!-- WebsiteTestCases.TC6_PortInAndPhone -->
+      <class name="WebsiteTestCases.TC4_PortIn">
+        <methods>
+          <include name="getBrowser"/>
+          <include name="browserclose"/>
+          <include name="portinUser"/>
+        </methods>
+      </class> <!-- WebsiteTestCases.TC4_PortIn -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
