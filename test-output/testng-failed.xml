@@ -3,13 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="WebsiteTestCases.TC7_GoldenNumber">
+      <class name="WebsiteTestCases.TC1_LoginLogout">
         <methods>
           <include name="browserclose"/>
-          <include name="goldenNumber"/>
           <include name="getBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- WebsiteTestCases.TC7_GoldenNumber -->
+      </class> <!-- WebsiteTestCases.TC1_LoginLogout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

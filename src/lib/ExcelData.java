@@ -8,6 +8,17 @@ public class ExcelData {
 	return email;
 	}
 	
+	/*
+	def reportPath = build.getWorkspace().child("test-output/emailable-report.html")
+	msg.setContent(reportPath.readToString(), "text/html");
+	
+	<class name="WebsiteTestCases.TC4_PortIn"/>
+      <class name="WebsiteTestCases.TC5_SimAndPhone"/>
+      <class name="WebsiteTestCases.TC6_PortInAndPhone"/>
+      <class name="WebsiteTestCases.TC8_PhoneOnly"/>
+	
+	*/
+	
 	public String getpass() {
 	String pass = excel.getData(2, 2, 1);
 	return pass;
