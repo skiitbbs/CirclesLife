@@ -4,10 +4,6 @@
   <test name="Test">
     <classes>
       <class name="WebsiteTestCases.TC3_SimOrder"/>
-      <class name="WebsiteTestCases.TC4_PortIn"/>
-      <class name="WebsiteTestCases.TC5_SimAndPhone"/>
-      <class name="WebsiteTestCases.TC6_PortInAndPhone"/>
-      <class name="WebsiteTestCases.TC8_PhoneOnly"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
