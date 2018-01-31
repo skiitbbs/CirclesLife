@@ -88,7 +88,7 @@ public class Regression_test {
 		mobileDevice md = new mobileDevice(driver);
 		md.before();
 		md.fullpayment();
-		md.after();
+		//md.after();
 		
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();
