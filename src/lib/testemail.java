@@ -1,4 +1,4 @@
-package lib;
+/*package lib;
 
 import java.util.Properties;
 
@@ -81,3 +81,4 @@ public class testemail {
 	 }
 
 }
+*/
