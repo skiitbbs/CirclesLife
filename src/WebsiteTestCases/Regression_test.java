@@ -83,12 +83,12 @@ public class Regression_test {
 	@Test (priority = 3)
 	public void simandphone() {
 		
-		driver.get(url);
+		driver.get("https://staging.circles.asia/plan");
 		
 		mobileDevice md = new mobileDevice(driver);
 		md.before();
 		md.fullpayment();
-		//md.after();
+		md.after();
 		
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();
@@ -107,15 +107,15 @@ public class Regression_test {
 	@Test (priority = 4)
 	public void Portsimandphone() {
 		
-		driver.get(url);
+		driver.get("https://staging.circles.asia/plan");
+		
+		portInFlow pf = new portInFlow(driver);
+		pf.portin();
 		
 		mobileDevice md = new mobileDevice(driver);
 		md.before();
 		md.fullpayment();
 		md.after();
-		
-		portInFlow pf = new portInFlow(driver);
-		pf.portin();
 		
 		paymentPage pg = new paymentPage(driver);
 		pg.PaymentPage();
@@ -132,7 +132,7 @@ public class Regression_test {
 	@Test (priority = 5)
 	public void phoneOnly() {
 		
-		driver.get(url);
+		driver.get("https://staging.circles.asia/plan");
 		
 		PhoneOnly po = new PhoneOnly(driver);
 		po.phoneonly();
