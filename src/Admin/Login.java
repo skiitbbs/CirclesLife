@@ -17,6 +17,7 @@ public class Login {
 	String email = data.getadminemail();
 	String pass = data.getadminpass();
 	String ppass = data.getvulcanpass();
+	String kirkpass = data.getkirkpass();
 	
 	public void login() {
 		
@@ -31,6 +32,15 @@ public class Login {
 		pdriver.findElement(By.xpath("//input[@autofocus='autofocus']")).sendKeys(email);
 		pdriver.findElement(By.xpath("//input[@type='password']")).sendKeys(ppass);
 		pdriver.findElement(By.xpath("//input[@type='submit']")).click();
+		
+	}
+	
+	public void kirkLogin() {
+		
+		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[1]")).sendKeys(email);
+		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/div/input[2]")).sendKeys(kirkpass);
+		pdriver.findElement(By.xpath("//*[@id=\"login-form\"]/div/button")).click(); 
+		
 		
 	}
 	

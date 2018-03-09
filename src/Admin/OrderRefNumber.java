@@ -17,7 +17,7 @@ public class OrderRefNumber {
 	File src;
 	FileOutputStream fout;
 	public WebDriver pdriver;
-	public String order;
+	//public String order;
 	int count ;
 	
 	public OrderRefNumber(WebDriver driver) {
@@ -29,15 +29,12 @@ public class OrderRefNumber {
 			
 				pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-				//System.out.println("Before code start.");
-				//String OrderRef = pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/div[2]/div/div/div/div/div[4]/div/span[2]")).getText();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				String order = pdriver.findElement(By.cssSelector(".row:nth-child(2) .col-xs-12 div div div div:nth-child(4) div span:nth-child(2)")).getText();
-				//String order = pdriver.findElement(By.xpath("//div[@class='col-xs-6'][1]")).getText();
+				String order = pdriver.findElement(By.cssSelector("#st-container > div > div > div:nth-child(2) > span > div > div > div:nth-child(2) > div > div > div > div > div:nth-child(5) > div > span:nth-child(2)")).getText();
 				System.out.println("Stored value = "+ order);
 				//this.order = order;
 				
@@ -52,7 +49,7 @@ public class OrderRefNumber {
 			
 				FileInputStream fis = new FileInputStream(src);
 			
-			 wb = new XSSFWorkbook(fis);
+				wb = new XSSFWorkbook(fis);
 			
 				} catch (Exception e) {
 					System.out.println(e.getMessage());

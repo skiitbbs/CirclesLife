@@ -51,6 +51,7 @@ public class TC9_CustomisePlan {
 		CustomisePlan cp = new CustomisePlan(driver);
 		cp.customisePlan();
 		
+		/*
 		deliveryInfo di = new deliveryInfo(driver);
 		di.DeliveyInfo();
 		
@@ -82,10 +83,11 @@ public class TC9_CustomisePlan {
 		
 		PlanSwitch ps = new PlanSwitch(driver);
 		ps.planswitch();
+		*/
 		
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

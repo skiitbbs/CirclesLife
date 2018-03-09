@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="WebsiteTestCases.Regression_test">
+      <class name="WebsiteTestCases.TC3_SimOrder">
         <methods>
-          <include name="Portsimandphone"/>
+          <include name="normalflow"/>
+          <include name="browserclose"/>
           <include name="getBrowser"/>
-          <include name="phoneOnly"/>
         </methods>
-      </class> <!-- WebsiteTestCases.Regression_test -->
+      </class> <!-- WebsiteTestCases.TC3_SimOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

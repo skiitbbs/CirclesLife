@@ -26,6 +26,9 @@ public class normalUser {
 	
 	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
 	
+	pdriver.findElement(By.xpath("//input[@type='text']")).sendKeys("F7OI4");
+	pdriver.findElement(By.xpath("//button[@class='btn btn-primary Button ladda-button']")).click();
+	
 	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
 	//pdriver.findElement(By.xpath("//div[@class='btn btn-primary btn-lg btn-block Links']")).click();
 	

@@ -11,7 +11,7 @@ import Admin.Login;
 import Admin.OrderDelivery;
 import Admin.OrderRefNumber;
 import Admin.PlanSwitch;
-import Pages.GoldenNumber;
+import Pages.ChooseNumber;
 import Pages.logIn;
 import Pages.normalUser;
 import Pages.paymentPage;
@@ -47,8 +47,8 @@ public class TC7_GoldenNumber {
 		logIn login = new logIn(driver);
 		login.login();
 		
-		GoldenNumber gn = new GoldenNumber(driver);
-		gn.goldenNumber();
+		ChooseNumber cn = new ChooseNumber(driver);
+		cn.chooseGoldenNumber();
 		
 		normalUser nu = new normalUser(driver);
 		nu.NormalUser();

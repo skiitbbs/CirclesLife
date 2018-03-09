@@ -129,6 +129,11 @@ public class ExcelData {
 		return kirkpass;
 	}
 	
+	public String getelitepass() {
+		String elitepass = excel.getData(1, 5, 1);
+		return elitepass;
+	} 
+	
 	public String getauthurl() {
 		String getauth = excel.getData(3, 0, 1);
 		return getauth;
@@ -163,5 +168,25 @@ public class ExcelData {
 		String getkirkurl = excel.getData(3, 6, 1);
 		return getkirkurl;
 	}
+	
+	public String getStagElitecoreurl() {
+		String getstagurl = excel.getData(3, 7, 1);
+		return getstagurl;
+		
+	}
+	
+	public String getProdElitecoreurl() {
+		String getprodurl = excel.getData(3, 8, 1);
+		return getprodurl;
+		
+	}
+	
+	/*
+	public String getPromo() {
+		String getPromo = excel.getData(3, 14, 1);
+		return getPromo;
+		
+	}
+	*/
 
 }

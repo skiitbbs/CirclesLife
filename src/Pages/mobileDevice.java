@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import lib.uielements;
+
 public class mobileDevice {
 	
 	WebDriver pdriver;
@@ -43,15 +45,14 @@ public class mobileDevice {
 		*/
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		//pdriver.findElement(By.xpath("//div[@class='default-phone']")).click(); //Website device link
-		pdriver.findElement(By.xpath("//span[@class='text-primary']")).click(); //Mobile Selection.
-		pdriver.findElement(By.xpath("//div[@class='col-xs-15'][1]")).click(); //color selection.
+		pdriver.findElement(By.xpath(uielements.selectmobile)).click(); //Mobile Selection.
+		pdriver.findElement(By.xpath(uielements.selectmobilecolour)).click(); //color selection.
 		
 		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		
-		pdriver.findElement(By.xpath("//div[@class='col-xs-4']")).click(); //Memory selection
-		pdriver.findElement(By.xpath("//*[@id=\"st-container\"]/div/div/div[2]/span/div/div[2]/div/div/div/div[5]/div[2]/div/div[1]/div")).click(); //Payment Selection
+		pdriver.findElement(By.xpath(uielements.selectmobilememory)).click(); //Memory selection
+		pdriver.findElement(By.xpath(uielements.selectfullamount)).click(); //Payment Selection
 		System.out.println("Full payment Device has been selected.");
 		
 	}
@@ -63,10 +64,16 @@ public class mobileDevice {
 		 * 
 		*/
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		pdriver.findElement(By.xpath("//span[@class='text-primary']")).click(); //Mobile Selection.
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[3]/div/div[2]/div")).click(); //color selection.
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div/div/div")).click(); //Memory selection
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[5]/div[2]/div/div[2]/div")).click(); //Payment selection
+		
+		pdriver.findElement(By.xpath(uielements.selectmobile)).click(); //Mobile Selection.
+		pdriver.findElement(By.xpath(uielements.selectmobilecolour)).click(); //color selection.
+		
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+		
+		pdriver.findElement(By.xpath(uielements.selectmobilememory)).click(); //Memory selection
+		pdriver.findElement(By.xpath(uielements.selectinstallment)).click(); //Payment Selection
+		System.out.println("Full payment Device has been selected.");
 		
 		System.out.println("Installment payment Device has been selected.");
 		
@@ -75,11 +82,16 @@ public class mobileDevice {
 	public void splitpayment() {
 		
 		pdriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		pdriver.findElement(By.xpath("//span[@class='text-primary']")).click(); //Mobile Selection.
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[3]/div/div[2]/div")).click(); //color selection.
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div/div/div")).click(); //Memory selection
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[5]/div[2]/div/div[3]/div")).click(); //Payment Selection
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div/div/div[6]/div[4]/div[2]/div[1]/div[2]/div/div/span")).click();
+		
+		pdriver.findElement(By.xpath(uielements.selectmobile)).click(); //Mobile Selection.
+		pdriver.findElement(By.xpath(uielements.selectmobilecolour)).click(); //color selection.
+		
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+		
+		pdriver.findElement(By.xpath(uielements.selectmobilememory)).click(); //Memory selection
+		pdriver.findElement(By.xpath(uielements.selectsplit)).click(); //Payment Selection
+		System.out.println("Full payment Device has been selected.");
 		
 		System.out.println("Split payment Device has been selected.");
 		

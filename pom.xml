@@ -36,7 +36,6 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>testcircle.xml</suiteXmlFile>
 					</suiteXmlFiles>
 			</configuration>
 	</plugin>

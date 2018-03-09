@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -39,7 +38,7 @@ public WebDriver pdriver;
 		WebElement iname = pdriver.findElement(By.xpath("//input[@name='firstName']"));
 		WebElement imobile = pdriver.findElement(By.xpath("//input[@name='contactNumber']"));
 		WebElement iemail = pdriver.findElement(By.xpath("//div[@class='col-xs-12']/div/div/input[@name='email']"));
-		WebElement ipincode = pdriver.findElement(By.xpath("//input[@name='deliveryPostalCode']"));
+		WebElement ipincode = pdriver.findElement(By.xpath("//div[@id='PlacesAutocomplete__root']"));
 		WebElement ihouse = pdriver.findElement(By.xpath("//input[@name='deliveryBlkHse']"));
 		WebElement istreet = pdriver.findElement(By.xpath("//input[@name='deliveryStreetName']"));
 		WebElement iunit = pdriver.findElement(By.xpath("//input[@name='deliveryUnit']"));

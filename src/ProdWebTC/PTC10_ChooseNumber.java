@@ -45,7 +45,7 @@ public class PTC10_ChooseNumber {
 		login.login();
 		
 		ChooseNumber cn = new ChooseNumber(driver);
-		cn.chooseNumber();
+		cn.chooseFreeNumber();
 		
 		deliveryInfo di = new deliveryInfo(driver);
 		di.DeliveyInfo();

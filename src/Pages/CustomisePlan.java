@@ -4,30 +4,39 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import lib.uielements;
 
 public class CustomisePlan {
 	
-	public WebDriver pdriver;
+	public WebDriver pdriver;public WebDriverWait wait;
 	
 	public CustomisePlan(WebDriver driver) {
 		pdriver = driver;
+		wait = new WebDriverWait(pdriver, 60);
 	}
 	
 	public void customisePlan() {
 		
+		
 		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		pdriver.findElement(By.xpath("//div[contains(text(), 'Add more Data, Talktime or SMS')]")).click();
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div[3]/span")).click();
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div[3]/span")).click();
+		pdriver.findElement(By.xpath(uielements.customplan)).click();
+		pdriver.findElement(By.xpath(uielements.customincreasedata)).click();
+		pdriver.findElement(By.xpath(uielements.customincreasedata)).click();
+		pdriver.findElement(By.xpath(uielements.customeincreasetalktime)).click();		
+		pdriver.findElement(By.xpath(uielements.customeincreasesms)).click();
 		
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div[1]/div/div/div[2]/div[3]/div[2]/div/div[3]/span")).click();
+		//Above lines will add Data, Talk-time and SMS in to Base Plan and then save it.
 		
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div[2]/div/div[1]/div/div/div[2]/div[4]/div[2]/div/div[3]/span")).click();
+		pdriver.findElement(By.xpath(uielements.customsavebutton)).click();
 		
-		pdriver.findElement(By.xpath("//a[@action='PUSH']")).click();
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(uielements.planselectnumber)));
 		
-		mobileDevice md = new mobileDevice(pdriver);
-		md.after();
+		System.out.println("Plan has been successfully saved.");
+		
+		pdriver.findElement(By.xpath(uielements.proceedbutton)).click();
 		
 	}
 
