@@ -1,4 +1,4 @@
-/*package lib;
+package lib;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -16,12 +16,12 @@ public static void execute(String reportFileName) throws Exception
 {
 String path="/Users/sumitkumar/git/CirclesLife/src/Test data.xlsx";
 
-String[] to={"<stakeholder1>","<stakeholder2>"};
+String[] to={"sumit.kumar.iitbbsr@gmail.com","sumit@circles.asia"};
 String[] cc={};
-String[] bcc={"<AutomationTester>"};
+String[] bcc={};
 
-SendMail.sendMail("<AutomationTesterUserName>",
-"<AutomationTesterPassword>",
+SendMail.sendMail("sumit@circles.asia",
+"Sumit@Circle",
 "smtp.gmail.com",
 "465",
 "true",
@@ -146,5 +146,3 @@ return false;
 }
 }
 }
-
-*/
