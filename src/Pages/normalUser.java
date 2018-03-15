@@ -16,7 +16,7 @@ public class normalUser {
 	//Function starts from here.
 	public void NormalUser() {
 	
-	pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	pdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	try {
 		Thread.sleep(1000);
@@ -25,7 +25,7 @@ public class normalUser {
 	}
 	
 	pdriver.findElement(By.xpath("//div[@class='offset-xs-2 col-xs-8']")).click();
-	
+	pdriver.findElement(By.xpath("//input[@type='text']")).clear();
 	pdriver.findElement(By.xpath("//input[@type='text']")).sendKeys("F7OI4");
 	pdriver.findElement(By.xpath("//button[@class='btn btn-primary Button ladda-button']")).click();
 	

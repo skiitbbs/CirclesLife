@@ -31,7 +31,7 @@ public class customerFile {
 			e.printStackTrace();
 		}
 		
-		int rowCount= pdriver.findElements(By.xpath("//*[@id='showGeneralsActive']/tbody/tr")).size();
+		int rowCount = pdriver.findElements(By.xpath("//*[@id='showGeneralsActive']/tbody/tr")).size();
 		System.out.println("Total number of AddOns present for the Customer is " +rowCount + ".");
 		
 		int j = 0;

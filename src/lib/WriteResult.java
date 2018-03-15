@@ -38,7 +38,7 @@ public class WriteResult {
 		
 		order2 = order;
 		sheet1 = wb.getSheetAt(2);
-		sheet1.getRow(3).createCell(3).setCellValue(order);
+		sheet1.getRow(3).createCell(4).setCellValue(order);
 		
 		try {
 			fout = new FileOutputStream(src);

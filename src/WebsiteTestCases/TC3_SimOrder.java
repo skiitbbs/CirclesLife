@@ -87,7 +87,7 @@ public class TC3_SimOrder {
 
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

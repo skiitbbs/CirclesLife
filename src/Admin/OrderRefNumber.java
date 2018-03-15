@@ -28,12 +28,7 @@ public class OrderRefNumber {
 	public String orderRefnumber() {
 			
 				pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				
 				String order = pdriver.findElement(By.cssSelector("#st-container > div > div > div:nth-child(2) > span > div > div > div:nth-child(2) > div > div > div > div > div:nth-child(5) > div > span:nth-child(2)")).getText();
 				System.out.println("Stored value = "+ order);
 				//this.order = order;

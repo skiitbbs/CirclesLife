@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import elitecoreElements.crestelLogIn;
+import elitecoreElements.customersDetails;
 import elitecoreElements.trialBillSearch;
 import lib.ExcelData;
 
@@ -30,7 +31,7 @@ public class testCasesToBeExecute {
 	return driver;
      }
 	
-	@Test
+	//@Test
 	public void CheckBill() {
 		
 		crestelLogIn login = new crestelLogIn(driver);
@@ -41,7 +42,21 @@ public class testCasesToBeExecute {
 		
 	}
 	
-	@AfterTest
+	@Test
+	public void getCustomerDetails() {
+		
+		crestelLogIn login = new crestelLogIn(driver);
+		login.loginToCrestel();
+		
+		customersDetails cd = new customersDetails(driver);
+		cd.getCustomerInformation();
+		cd.writeinexcel();
+		
+		
+		
+	}
+	
+	//@AfterTest
 	public void browserclose() {
 		driver.close();
 	}

@@ -22,8 +22,9 @@ public WebDriver pdriver;
 	
 	public void DeliveyInfo() {
 		
-		pdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		pdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
+
 		//Below lines of the code will Read the data from the excel. It also format the integer value to String.
 		ExcelData data = new ExcelData();
 		String email = data.getemail();
@@ -33,17 +34,11 @@ public WebDriver pdriver;
 		String street = data.getstreet();
 		String unit = data.getunit();
 		String building = data.getbuilding();
-		String nric = data.getnric();
+		//String nric = data.getnric();
 		
 		WebElement iname = pdriver.findElement(By.xpath("//input[@name='firstName']"));
 		WebElement imobile = pdriver.findElement(By.xpath("//input[@name='contactNumber']"));
 		WebElement iemail = pdriver.findElement(By.xpath("//div[@class='col-xs-12']/div/div/input[@name='email']"));
-		WebElement ipincode = pdriver.findElement(By.xpath("//div[@id='PlacesAutocomplete__root']"));
-		WebElement ihouse = pdriver.findElement(By.xpath("//input[@name='deliveryBlkHse']"));
-		WebElement istreet = pdriver.findElement(By.xpath("//input[@name='deliveryStreetName']"));
-		WebElement iunit = pdriver.findElement(By.xpath("//input[@name='deliveryUnit']"));
-		WebElement ibuilding = pdriver.findElement(By.xpath("//input[@name='deliveryBuildingName']"));
-		WebElement iNRIC = pdriver.findElement(By.xpath("//input[@name='nric']"));
 		
 		//Below line of code is going to fill all the form details entered into excel.
 		
@@ -69,18 +64,6 @@ public WebDriver pdriver;
 			
 		}
 
-		//Below line of code will enter the deliver address details.
-		
-		ipincode.clear(); ipincode.sendKeys(pincode);
-		ihouse.clear(); ihouse.sendKeys(house);
-		istreet.clear(); istreet.sendKeys(street);
-		iunit.clear(); iunit.sendKeys(unit);
-		ibuilding.clear(); ibuilding.sendKeys(building);
-		
-		JavascriptExecutor jse = (JavascriptExecutor)pdriver;
-		jse.executeScript("window.scrollBy(0,250)", "");
-		
-		pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][4]")).click();
 		
 		try {
 			Thread.sleep(2000);
@@ -88,28 +71,14 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		jse.executeScript("window.scrollBy(0,300)", "");
-		
-		pdriver.findElement(By.xpath("//div[@class='col-sm-4 col-xs-6 delivery-slots-time'][1]")).click();
-		
 		WebElement NRIC = pdriver.findElement(By.xpath("//select[@name='docType']"));
+		WebElement iNRIC = pdriver.findElement(By.xpath("//input[@name='nric']"));
+		
 		Select ID = new Select(NRIC);
 		ID.selectByValue("NRIC");
 		iNRIC.clear(); iNRIC.sendKeys("S8927668C");
 		
-		/*
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		*/
-		
-		jse.executeScript("window.scrollBy(0,400)", "");
-		
-		//Selecting the Delivery Slot timing
 		pdriver.findElement(By.xpath("//div[@class= 'col-xs-6'][1]")).click();
-
 		uploadFile uf = new uploadFile(pdriver);
 		uf.Uploadfile();
 		
@@ -120,26 +89,37 @@ public WebDriver pdriver;
 			e.printStackTrace();
 		}
 		
-		pdriver.findElement(By.xpath("//*[@id=\'st-container\']/div/div/div[2]/span/div/div/div[2]/div/div/div/div[4]/div[2]/div[3]/div[2]/div[2]/div")).click();
+		pdriver.findElement(By.xpath("//div[@class= 'col-xs-6'][2]")).click();
 		//pdriver.findElement(By.cssSelector("//div[@class= 'col-xs-6'][2]")).click();
 		uf.Uploadfile();
-		/*
-		Boolean isPresent = pdriver.findElements(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).size() > 0;
 		
-		if (isPresent = true) {
-			pdriver.findElements(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img")).click();
-		}
+		jse.executeScript("window.scrollBy(0,500)", "");
 		
-		
-		WebElement portinCheck = pdriver.findElement(By.xpath("html/body/div[3]/div/div/div[1]/div/div/div[2]/span/div/div[2]/div/div/div/div[4]/div[2]/div[4]/div[1]/div[1]/div/img"));
-		boolean exist2 = portinCheck.equals(portinCheck);
-		
-		if (exist2 = true) {
-			
-			portinCheck.click();
-			
-		}
-		*/
+		//Below line of code will enter the deliver address details.
+				WebElement ipincode = pdriver.findElement(By.xpath("//*[@id=\"PlacesAutocomplete__root\"]/input"));
+				ipincode.click(); ipincode.sendKeys(pincode);
+				
+				WebElement ihouse = pdriver.findElement(By.xpath("//input[@name='deliveryBlkHse']"));
+				WebElement istreet = pdriver.findElement(By.xpath("//input[@name='deliveryStreetName']"));
+				WebElement iunit = pdriver.findElement(By.xpath("//input[@name='deliveryUnit']"));
+				WebElement ibuilding = pdriver.findElement(By.xpath("//input[@name='deliveryBuildingName']"));
+				
+				ihouse.clear(); ihouse.sendKeys(house);
+				istreet.clear(); istreet.sendKeys(street);
+				iunit.clear(); iunit.sendKeys(unit);
+				ibuilding.clear(); ibuilding.sendKeys(building);
+				
+				jse.executeScript("window.scrollBy(0,250)", "");
+				
+				pdriver.findElement(By.xpath("//div[@class='col-xs-15 delivery-slots-day'][4]")).click();
+				
+				//Selecting the Delivery Slot timing
+				jse.executeScript("window.scrollBy(0,300)", "");
+				
+				pdriver.findElement(By.xpath("//div[@class='col-sm-4 col-xs-6 delivery-slots-time'][1]")).click();
+				
+
+				
 
 		try {
 			Thread.sleep(2000);

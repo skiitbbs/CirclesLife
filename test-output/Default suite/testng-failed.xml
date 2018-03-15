@@ -6,7 +6,6 @@
       <class name="WebsiteTestCases.TC3_SimOrder">
         <methods>
           <include name="normalflow"/>
-          <include name="browserclose"/>
           <include name="getBrowser"/>
         </methods>
       </class> <!-- WebsiteTestCases.TC3_SimOrder -->

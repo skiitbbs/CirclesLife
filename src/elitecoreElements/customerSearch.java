@@ -17,7 +17,7 @@ public class customerSearch {
 	
 	public void gotoCustomerPage() {
 		
-pdriver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
+		pdriver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		
 		WebElement leftmenu = pdriver.findElement(By.xpath(crestelui.account));
 		//Thread will wait till it finds the given elements.
@@ -29,7 +29,7 @@ pdriver.manage().timeouts().implicitlyWait(05, TimeUnit.SECONDS);
 		
 		pdriver.switchTo().frame("zk_comp_55");
 
-		pdriver.findElement(By.xpath("//input[@id='txtmobilenumber']")).sendKeys("81267152");
+		pdriver.findElement(By.xpath("//input[@id='txtmobilenumber']")).sendKeys("87423620");
 		//Going to Customer detail page. 
 		pdriver.findElement(By.xpath(crestelui.searchbutton)).click();
 		pdriver.findElement(By.xpath(crestelui.clickonname)).click();

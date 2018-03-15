@@ -27,7 +27,7 @@ public class crestelLogIn {
 		pdriver.findElement(By.xpath(crestelui.loginbutton)).click();
 		
 		int size = pdriver.findElements(By.tagName("iframe")).size();
-		System.out.println("Total Number of fram in this page is: " +size);
+		System.out.println("Total Number of frame in this page is: " +size);
 	
 	}
 
