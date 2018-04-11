@@ -78,6 +78,8 @@ public WebDriver pdriver;
 		ID.selectByValue("NRIC");
 		iNRIC.clear(); iNRIC.sendKeys("S8927668C");
 		
+		jse.executeScript("window.scrollBy(0,500)", "");
+		
 		pdriver.findElement(By.xpath("//div[@class= 'col-xs-6'][1]")).click();
 		uploadFile uf = new uploadFile(pdriver);
 		uf.Uploadfile();

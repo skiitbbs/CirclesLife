@@ -50,7 +50,8 @@ public class testCasesToBeExecute {
 		
 		customersDetails cd = new customersDetails(driver);
 		cd.getCustomerInformation();
-		cd.writeinexcel();
+		//cd.writeinexcel();
+		cd.writeExcel();
 		
 		
 		

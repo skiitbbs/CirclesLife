@@ -6,6 +6,7 @@ public class crestelui {
 	public static final String email = "//input[@id='txtusername']";
 	public static final String pass = "//input[@id='txtpassword']";
 	public static final String loginbutton = "//span[@id='zk_comp_37']";
+	public static final String loginconfirm = "//button[@id='btn16']";
 	
 	//Below ui elements belongs to search customer account page. 
 	public static final String account = "//*[@id='account-a']/span";
@@ -41,5 +42,13 @@ public class crestelui {
 	public static final String plannamelink = "//a[@id='serviceinstancename0']";
 	public static final String baccountlink = "//a[@id='bankname0']";
 	public static final String Saccountlink = "//a[@id='servicename0']";
+	
+	//Below ui elements are belong to Usage Data, voice and SMS.
+	public static final String usage = "//i[@class='z-icon-caret-up']";
+	public static final String useageinfo = "//a[@id='usageinformation']";
+	public static final String detail = "//input[@id='viewtypedetailradio-real']";
+	public static final String datewise = "//input[@id='durationtypedatewiseradio-real']";
+	public static final String fromdate = "//*[@id=\"fromdatedb-btn\"]/i";
+	
 
 }

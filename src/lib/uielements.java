@@ -1,11 +1,5 @@
 package lib;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
 public class uielements {
 	
 	public static final String email = "//input[@name='email']";

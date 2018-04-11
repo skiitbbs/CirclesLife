@@ -17,7 +17,8 @@ import lib.ExcelData;
 		//below lines of code is going to extract the information from excel file.
 		//Please call(Initialize) those data only which you want to use and assign accordingly.
 		ExcelData data = new ExcelData();
-		String url = data.getkirkurl();
+		//String url = data.getkirkurl();
+		String url = data.getrikerurl();
 
 		@BeforeTest
 		private WebDriver getBrowser() {
@@ -40,6 +41,7 @@ import lib.ExcelData;
 			kcd.gotoCustomertab();
 			kcd.getkirkcustomerdetails();
 			kcd.cutomersAddOnDetails();
+			kcd.writeExcel();
 		}
 		
 		@AfterTest

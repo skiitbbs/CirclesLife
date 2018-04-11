@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16384" started-at="2018-03-14T09:15:38Z" finished-at="2018-03-14T09:15:54Z">
+  <suite name="Default suite" duration-ms="12703" started-at="2018-04-11T08:43:39Z" finished-at="2018-04-11T08:43:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16384" started-at="2018-03-14T09:15:38Z" finished-at="2018-03-14T09:15:54Z">
+    <test name="Default test" duration-ms="12703" started-at="2018-04-11T08:43:39Z" finished-at="2018-04-11T08:43:52Z">
       <class name="automateBilling.testCasesToBeExecute">
-        <test-method status="PASS" signature="getBrowser()[pri:0, instance:automateBilling.testCasesToBeExecute@1283bb96]" name="getBrowser" is-config="true" duration-ms="3013" started-at="2018-03-14T17:15:38Z" finished-at="2018-03-14T17:15:41Z">
+        <test-method status="PASS" signature="getBrowser()[pri:0, instance:automateBilling.testCasesToBeExecute@1283bb96]" name="getBrowser" is-config="true" duration-ms="2180" started-at="2018-04-11T16:43:39Z" finished-at="2018-04-11T16:43:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="getCustomerDetails()[pri:0, instance:automateBilling.testCasesToBeExecute@1283bb96]" name="getCustomerDetails" duration-ms="13340" started-at="2018-03-14T17:15:41Z" finished-at="2018-03-14T17:15:54Z">
+        <test-method status="PASS" signature="getCustomerDetails()[pri:0, instance:automateBilling.testCasesToBeExecute@1283bb96]" name="getCustomerDetails" duration-ms="10499" started-at="2018-04-11T16:43:41Z" finished-at="2018-04-11T16:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCustomerDetails -->
